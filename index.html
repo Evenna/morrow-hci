@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Morrow 学生工作区 · HCI 研究议题规划</title>
+<style>
+:root{--bg:#0d0f12;--fg:#e8e6e1;--dim:#8b8983;--line:#24272c;--acc:#c8a35a;--card:#14171b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.75 -apple-system,"PingFang SC","Noto Sans SC",system-ui,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:64px 24px 120px}
+h1{font-size:34px;line-height:1.3;margin:0 0 8px;font-weight:600;letter-spacing:-.01em}
+.sub{color:var(--dim);font-size:14px;margin-bottom:56px;border-bottom:1px solid var(--line);padding-bottom:24px}
+h2{font-size:22px;margin:64px 0 17px;font-weight:600;padding-top:8px}
+h2 .n{color:var(--acc);font-size:14px;font-family:ui-monospace,monospace;margin-right:10px;vertical-align:2px}
+h3{font-size:17px;margin:0 0 10px;font-weight:600}
+p{margin:0 0 14px;color:#d4d2cc}
+.lead{font-size:17px;color:var(--fg)}
+ul{padding-left:22px;margin:0 0 16px}li{margin-bottom:8px;color:#d4d2cc}
+li b{color:var(--fg);font-weight:600}
+.quote{border-left:2px solid var(--acc);padding:6px 0 6px 18px;margin:18px 0;color:#bdbab3;font-size:15px}
+.bad{color:#9a9691;text-decoration:line-through;text-decoration-color:#555}
+.good{color:var(--fg)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin:18px 0}
+.card .claim{font-size:17px;font-weight:600;line-height:1.55;margin-bottom:6px}
+.card .claim i{color:var(--acc);font-style:normal;font-family:ui-monospace,monospace;font-size:13px;margin-right:8px}
+.q{color:#a9c7d8;font-size:15px;margin:0 0 14px}
+dl.kv{margin:0;display:grid;grid-template-columns:74px 1fr;gap:8px 14px;font-size:14.5px}
+dl.kv dt{color:var(--dim);font-size:13px}
+dl.kv dd{margin:0;color:#d0cec8}
+.tag{display:inline-block;font-size:12px;border:1px solid var(--line);border-radius:999px;padding:1px 10px;color:var(--dim);margin-left:8px;vertical-align:2px;font-weight:400}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14.5px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--dim);font-weight:500;font-size:13px}
+code{font-family:ui-monospace,monospace;font-size:13px;background:#1b1f24;padding:1px 5px;border-radius:4px;color:#cbb994}
+.foot{margin-top:80px;padding-top:20px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+.rank{color:var(--acc);font-family:ui-monospace,monospace;font-size:13px}
+</style>
+</head>
+<body><div class="wrap">
+
+<h1>Morrow 学生工作区<br><span style="color:var(--dim);font-weight:400;font-size:22px">把它变成一篇可发表的 HCI 论文</span></h1>
+<div class="sub">基于你公开的设计稿（14 张工作区概念稿：课堂与工作坊 / 新建与空项目 / 成熟项目与多选 / AI 讨论与执行 / 灵动版本叠层 / 笔记编辑与留言 / 海报详情与局部修改 / 网页与代码 / 视频与分镜 / 三维与模型 / 资料与研究 / 团队活动与权限）<br>2026-11 · 为张一文整理</div>
+
+<h2><span class="n">00</span>先把话说死</h2>
+<p class="lead">这个平台不可能用一篇论文讲完。工作区、AI 执行、多模态产出、教学与团队权限，是四个不同的研究对象。<b>选一条，做深，其余全部写进 future work。</b>下面六条命题里，只有一条是你明年该动手的。</p>
+<p>另一件必须现在接受的事：HCI 的"顶刊"是 TOCHI，单人首发不现实。CHI / CSCW / DIS / UIST 的 full paper 就是这一行的硬通货，四十页、双栏、八人评审，跟期刊同权重。先拿它，三年后再把扩展版（≥30% 新内容）投 TOCHI。</p>
+
+<h2><span class="n">01</span>什么算贡献：你现在的写法会被 desk reject</h2>
+<p>Wobbrock &amp; Kientz 把 HCI 的贡献分成七类。设计背景的人九成卡在第一类，因为"我做了一个平台"描述的是<b>产品</b>，不是<b>知识</b>。</p>
+<table>
+<tr><th>类型</th><th>意思</th><th>对你的难度</th></tr>
+<tr><td>Empirical 实证</td><td>做研究，给出关于人的新发现</td><td>低（你有真实用户）</td></tr>
+<tr><td>Artifact 制品</td><td>系统本身就是贡献，但必须证明"非显然"</td><td>中（演示会被当 demo）</td></tr>
+<tr><td>Methodological 方法</td><td>新的评估/分析手段</td><td>中高</td></tr>
+<tr><td>Theoretical 理论</td><td>概念框架、设计空间</td><td>高</td></tr>
+<tr><td>Dataset 数据集</td><td>公开数据 + 说明文档</td><td>低（最容易被低估的路）</td></tr>
+<tr><td>Review 综述</td><td>系统梳理一个领域</td><td>中（耗时，但不新）</td></tr>
+<tr><td>Opinion 观点</td><td>立场文</td><td>高（要资历）</td></tr>
+</table>
+<div class="quote">
+<span class="bad">❌ 我做了一个学生在里面上课、创作、和 AI 一起工作的多模态工作区。</span><br><br>
+<span class="good">✅ 我发现，当 AI 的修改粒度从"整张重画"降到"只改这一个元素"时，学生对自己作品的作者感显著上升，但主动改动的次数下降——也就是说，更细的 AI 介入换来了更强的归属感，代价是更少的自主探索。</span>
+</div>
+<p>第二句才是知识。它有一个可被反驳的因果claim、一个自变量、一个反直觉的代价。</p>
+
+<h2><span class="n">02</span>五条文献脉络：谁已经在，你的空位在哪</h2>
+<p class="lead">每条线只读 3–5 篇：一篇奠基（老）、一篇近三年代表（新）、一篇综述（省时间）。</p>
+<ul>
+<li><b>AI 与作者身份 / 心理所有权</b> —— 已有：human-AI co-creation 的一系列 CHI 工作、psychological ownership（Pierce 等 2001）、以及 AI 辅助写作里"这是我的字吗"的研究。<b>你的位置</b>：几乎所有人研究的是<b>文本</b>或<b>单张图</b>的共写；没人把"<b>修改粒度</b>"当成自变量，也没人在<b>多模态项目</b>（海报→网页→视频→3D）里看过作者感如何随模态迁移。</li>
+<li><b>过度依赖 / 认知卸载</b> —— 已有：Buçinca 2021 的 cognitive forcing、Risko &amp; Gilbert 2016 的 cognitive offloading、Passi &amp; Vorvoreanu 2022 的"越顺滑越危险"。<b>你的位置</b>：他们的实验都是<b>一次性任务、陌生技能</b>；设计教育是<b>长周期、有作品、有人评</b>的情境，agent 直接"执行"（而不只是回答）带来的技能侵蚀，没人测过。</li>
+<li><b>Studio 教学法与计算化</b> —— 已有：设计工作室/评图（critique）的经典研究、CSCW 里关于共享工作空间与可见性的老工作、以及近年"课堂编排（orchestration）"研究。<b>你的位置</b>：评图文化里"<b>半成品被公开看见</b>"是核心机制，但现有教学平台把它变成了提交箱；<b>把"谁能看到谁的中间稿"做成可调参数</b>，这个设计空间是空的。</li>
+<li><b>多模态创作的工具切换成本</b> —— 已有：representation / boundary object 的概念（Star &amp; Griesemer 1989）、跨工具工作流的实证研究。<b>你的位置</b>：一人工作区里同时承载海报、网页、分镜、3D，真正的科学问题不是"能不能做"，而是<b>同一件作品在不同模态间的"翻译"丢失了什么、又被谁补回来</b>。</li>
+<li><b>AI 时代的评价与真实性</b> —— 已有：学术诚信、AI 检测的批判性研究。<b>你的位置</b>：设计教育的评价单位是<b>作品集</b>，而作品集正在失去"过程证据"。你的平台天然在产生过程日志——<b>这是一份别人拿不到的数据集</b>。</li>
+</ul>
+
+<h2><span class="n">03</span>六条可独立发表的命题</h2>
+<p class="lead">每条都能单独成文；如果两条需要同一批数据，就合并。<span class="rank">以下几项是"过线的最低配置"，不是理想值。</span></p>
+
+<div class="card">
+<div class="claim"><i>P1</i>AI 修改的粒度决定作者感，并反向影响自主探索<span class="tag">首推</span></div>
+<p class="q">RQ：把 AI 的介入从"整件重做"细化为"只改选中元素"，会如何改变学生对自己作品的归属感和后续修改行为？</p>
+<dl class="kv">
+<dt>为什么新</dt><dd>共写研究停在文本、停在"AI 帮了多少"；没人在多模态设计任务里拿<b>修改粒度</b>做受试内操纵，也没人报告"归属感↑、探索↓"这对反向指标。</dd>
+<dt>怎么做</dt><dd>受试内三水平（整件重生成 / 区块重生成 / 元素级重生成）× 两种模态（海报、网页），N=48（设计类学生，校内+线上）。每人做两个任务，拉丁方平衡顺序。测量：心理所有权量表（Pierce 改编）+ 客观改动次数/改动距离 + 事后访谈 12 人。日志必须记录<b>每次接受/拒绝/手动改写</b>。</dd>
+<dt>证据链</dt><dd>量化主效应 + 一个反直觉的交互（高归属感伴随低探索）需要质性解释 → 混合方法，编码两人独立、报告 kappa ≥ .8。</dd>
+<dt>投哪里</dt><dd>CHI full paper（首选）；若交互效应不稳，改投 DIS。</dd>
+<dt>风险</dt><dd>审稿人会说"这就是 <i>grain of control</i> 的老问题"。答法：你的贡献是<b>跨模态的迁移</b>与<b>归属—探索的权衡</b>，不是粒度本身。null 结果也成立：粒度不影响归属感，说明"局部修改"作为卖点是伪需求——这条对产业界同样有价值。</dd>
+</dl>
+</div>
+
+<div class="card">
+<div class="claim"><i>P2</i>让 agent 直接"执行"比让它"提问"更能完成任务，但更少学到东西</div>
+<p class="q">RQ：AI 的介入时机（先做 vs 先问）与支架开关，如何影响任务质量与两周后的技能保持？</p>
+<dl class="kv">
+<dt>为什么新</dt><dd>过度依赖研究都在<b>检索/写作</b>情景，且测的是当下表现；设计技能是<b>程序性</b>的，需要延迟后测才看得出侵蚀。</dd>
+<dt>怎么做</dt><dd>2×2 组间（主动执行 / 先提问后执行 × 有支架 / 无支架），N=64。任务：版式或配色改造，前后测 + 两周后延迟测，作品由<b>盲评</b>两位设计教师打分（ICC 报告）。</dd>
+<dt>证据链</dt><dd>表现无差异 + 后测有差异 = 最强结论；再加一段过程日志（提问次数、修改轮次）。</dd>
+<dt>投哪里</dt><dd>CHI / DIS；偏教育学可改投 CSCL、IJ Design。</dd>
+<dt>风险</dt><dd>N 小、效应弱。缓解：把技能指标做成二值 rubric 而非连续分；预先登记假设。允许"无差异"结论——那说明设计教育里的 AI 恐慌被夸大，是干净的公共品。</dd>
+</dl>
+</div>
+
+<div class="card">
+<div class="claim"><i>P3</i>把"谁能看见谁的中间稿"做成参数，会改变评图文化本身</div>
+<p class="q">RQ：中间稿的可见性设置（全公开 / 匿名公开 / 只给教师）如何影响学生的迭代频率、求助行为与评语质量？</p>
+<dl class="kv">
+<dt>为什么新</dt><dd>可见性研究多在开源社区与企业协作；设计课堂的"公开半成品"是一种<b>教学仪式</b>，没人把它参数化过。</dd>
+<dt>怎么做</dt><dd>真实课程部署研究：1 门课、20–30 人、6 周，三周一个可见性条件（拉丁方）。日志 + 每周 10 分钟问卷 + 结课访谈 10 人 + 教师访谈。伦理：知情同意、可退出、匿名化。</dd>
+<dt>证据链</dt><dd>行为差异（迭代次数、评论长度、被查看次数）+ 学生自述的"被看见的压力"。</dd>
+<dt>投哪里</dt><dd>CSCW——注意它没有独立截稿，必须先中 PACM HCI/CSCW 或 TOCHI 的 rolling submission。</dd>
+<dt>风险</dt><dd>样本是一个班，外推性被质疑。答法：明确写"instrumented case study"，贡献是<b>设计空间与机制</b>，不是效应量。</dd>
+</dl>
+</div>
+
+<div class="card">
+<div class="claim"><i>P4</i>教师需要的是"agent 活动摘要"，不是更详细的作品列表</div>
+<p class="q">RQ：给教师呈现 AI 协作摘要（谁在依赖、谁在卡住）相比原始作品列表，能否降低编排负荷、提升干预准确率？</p>
+<dl class="kv">
+<dt>为什么新</dt><dd>学习分析仪表盘研究很多，但没人处理"<b>学生的 AI 也在场</b>"这一层：教师面对的不是 30 个学生，是 30 个学生 + 30 个 agent。</dd>
+<dt>怎么做</dt><dd>形成性研究：先访谈 5 位教师提炼信号，再做对照实验（N=20 教师，随机分配两种仪表盘），任务是从 12 个模拟学生里挑出需要干预的人，测准确率、用时、信心。</dd>
+<dt>证据链</dt><dd>准确率 + 用时 + NASA-TLX 负荷；再加"误报/漏报"分析。</dd>
+<dt>投哪里</dt><dd>CHI（学习/工作类 track）或 LAK。</dd>
+<dt>风险</dt><dd>需要教师被试，排期长。如果招不到，降级为<b>设计探针 + 反思性分析</b>，投 CHI Poster 破零。</dd>
+</dl>
+</div>
+
+<div class="card">
+<div class="claim"><i>P5</i>同一件作品在多模态之间"翻译"时，丢失的是意图，补上的是惯例</div>
+<p class="q">RQ：从海报到网页到分镜的转译过程中，哪些设计决策被保留、被丢弃、被规范化？AI 在其中扮演什么角色？</p>
+<dl class="kv">
+<dt>为什么新</dt><dd>boundary object 理论讲了三十年"物件在社群间传递"，但没讲<b>物件在一个人、一个 agent、多个模态之间传递</b>。这是新的边界对象。</dd>
+<dt>怎么做</dt><dd>作品研究（artifact study）：8–10 名学生，同一概念做三种模态，收集全部中间版本 + 追溯访谈；对"意图—决策"做差异编码，标注每次 AI 介入的动因。</dd>
+<dt>证据链</dt><dd>编码表 + 有代表性的 3 条"意图丢失"轨迹（可视化版本树，你的"灵动版本叠层"正好是素材）。</dd>
+<dt>投哪里</dt><dd>DIS（full paper 或 Pictorials）；艺术向可投 Leonardo、TEI。</dd>
+<dt>风险</dt><dd>"太像设计评论，不像 HCI"。答法：把发现落回<b>交互设计含义</b>——什么样的转译交互能保住意图，给出 3 条可检验的设计准则。</dd>
+</dl>
+</div>
+
+<div class="card">
+<div class="claim"><i>P6</i>学生—agent 多模态创作过程日志，是一份还不存在的数据集</div>
+<p class="q">RQ（数据集贡献）：一份带 AI 介入标注、跨模态、跨 6–8 周的真实设计学习过程数据，能否支撑依赖/技能/评价三类下游研究？</p>
+<dl class="kv">
+<dt>为什么新</dt><dd>公开的 AI 协作日志几乎是<b>匿名大众、短会话</b>；设计教育的长周期、多模态、有评价结果的数据集是空白。</dd>
+<dt>怎么做</dt><dd>一个学期的一门课，补齐埋点（见下），脱敏后发布 + datasheet（Gebru 等 2021）+ 基线任务（如"预测教师评语等级"）。</dd>
+<dt>证据链</dt><dd>数据规模、标注一致性、两个基线模型的性能下限。</dd>
+<dt>投哪里</dt><dd>CHI/DIS 的 dataset track、CSCW、或 Scientific Data。</dd>
+<dt>风险</dt><dd>规模不够（N 学生少）→ 以"密集纵向 + 多模态"取胜，别拼条数；伦理审查最重，必须早做。</dd>
+</dl>
+</div>
+
+<h2><span class="n">04</span>快赢通道（别小看）</h2>
+<ul>
+<li><b>CHI Poster / Late-Breaking Work</b>：一篇四页，把你已有的工作区与 P1 的预实验放上去，零风险破零，简历上能用。</li>
+<li><b>DIS Pictorials</b>：设计稿本身就是材料，14 张概念稿 + 一套设计论证，配图说话，比 full paper 短、比作品集硬。</li>
+<li><b>中文先发</b>：装饰 / 美术观察 / 包装工程写一篇"AI 协作工作区的设计框架"，国内节奏快，也能给英文版打底。</li>
+</ul>
+
+<h2><span class="n">05</span>论文骨架与每一节的死法</h2>
+<table>
+<tr><th>章节</th><th>字数（双栏约）</th><th>最常见的失败</th></tr>
+<tr><td>Intro</td><td>800</td><td>从"AI 时代来了"讲起。要从<b>一个具体的观察</b>讲起。</td></tr>
+<tr><td>Related work</td><td>1500</td><td>罗列。要写成"他们做了 X，因此留下了 Y 这个缝"。</td></tr>
+<tr><td>System</td><td>1200</td><td>贴截图代替设计理由。每张图都要回答"为什么这样设计、替代方案是什么"。</td></tr>
+<tr><td>Study</td><td>1500</td><td>只说做了什么，不说为什么这么设计。条件、N、时长、测量、编码方案、kappa 一个都不能少。</td></tr>
+<tr><td>Findings</td><td>1800</td><td>把统计结果抄一遍。要有"我们没想到"的那一段。</td></tr>
+<tr><td>Discussion</td><td>1500</td><td>变成总结。Discussion 只做三件事：为什么是这样 → 对设计意味着什么 → 对理论的回响。</td></tr>
+<tr><td>Limitations</td><td>300</td><td>自曝太狠。只写真实的、且不致命的。</td></tr>
+</table>
+
+<h2><span class="n">06</span>现在就该动的一件事：埋点</h2>
+<p>所有命题都要真实日志，而埋点<b>上线后再补是最贵的</b>。今天就把这些字段记下来（脱敏、可关联、可导出）：</p>
+<p><code>session_id</code> <code>project_id</code> <code>student_hash</code> <code>modality</code>(poster/web/storyboard/3d) <code>artifact_version_id</code> <code>parent_version_id</code> <code>action</code>(生成/接受/拒绝/手动改写/回滚) <code>ai_granularity</code>(whole/region/element) <code>prompt</code> <code>agent_output_ref</code> <code>latency</code> <code>next_action</code> <code>visibility_setting</code> <code>comment_thread_id</code></p>
+<p>另外两个动作：① 给"版本叠层"加一个<b>可导出版本树</b>的接口，P5 全靠它；② 开学前拿到伦理/知情同意模板，别等数据收完了才补。</p>
+
+<h2><span class="n">07</span>十二周（按最短路径排）</h2>
+<table>
+<tr><th>周</th><th>做什么</th><th>过关标准</th></tr>
+<tr><td>1–2</td><td>锁定 P1，写 1 页 research proposal（claim + RQ + 设计 + 测量）</td><td>能对导师讲 3 分钟不卡</td></tr>
+<tr><td>2–3</td><td>读 12 篇（每条线 3 篇），做一张"他们—空位"对照表</td><td>每篇写一句"它替我证明了什么"</td></tr>
+<tr><td>3–5</td><td>实现 P1 的三档粒度（复用现有局部修改），补埋点</td><td>能跑完一整条日志</td></tr>
+<tr><td>5–6</td><td>招募 8 人预实验，修任务说明与量表</td><td>完成率 &gt; 80%</td></tr>
+<tr><td>6–8</td><td>正式实验 N=48，两模态</td><td>数据完整率 &gt; 90%</td></tr>
+<tr><td>8–9</td><td>分析 + 12 人访谈编码</td><td>kappa ≥ .8，效应方向清楚</td></tr>
+<tr><td>9–11</td><td>成稿（按上面的骨架，逐节写）</td><td>导师能读懂 Findings</td></tr>
+<tr><td>11–12</td><td>内部评审 → 按目标会议的模板与页数定稿</td><td>格式零错误</td></tr>
+</table>
+<p style="color:var(--dim);font-size:14px">截稿日期每一届都变，且 CHI 近年有 revise-and-resubmit 窗口，"好像过了"的周期经常还有一条活路。投稿前去看目标会议官网的 for-authors / call-for-papers 页面，以那里为准——这次我没有替你抓。</p>
+
+<div class="foot">
+一句话总结：你现在手上最有价值的不是"一个工作区"，而是<b>一群真实学生、在真实课堂里、跨模态地、和 AI 一起做长周期作品</b>——这个情境本身就稀缺。选 P1，把它做成一个关于"修改粒度与作者感"的实验，剩下的都留给 future work。
+</div>
+
+</div></body></html>
