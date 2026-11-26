@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>这东西跟 SCI 有关系吗 · 往哪个方向写</title>
+<style>
+:root{--bg:#0b0d10;--fg:#eae8e3;--dim:#85837e;--line:#22252a;--acc:#8fb58a;--acc2:#c8a35a;--card:#121518;--red:#c97a6a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.78 -apple-system,"PingFang SC","Noto Sans SC",system-ui,sans-serif}
+.wrap{max-width:890px;margin:0 auto;padding:64px 24px 120px}
+h1{font-size:33px;line-height:1.32;margin:0 0 10px;font-weight:600;letter-spacing:-.01em}
+h1 em{color:var(--acc);font-style:normal}
+.sub{color:var(--dim);font-size:14px;margin-bottom:50px;border-bottom:1px solid var(--line);padding-bottom:22px}
+h2{font-size:21px;margin:60px 0 16px;font-weight:600;padding-top:6px}
+h2 .n{color:var(--acc);font-size:13px;font-family:ui-monospace,monospace;margin-right:10px;vertical-align:2px}
+h3{font-size:16.5px;margin:26px 0 8px;font-weight:600;color:#f0eee9}
+p{margin:0 0 14px;color:#d3d1cb}
+.lead{font-size:17px;color:var(--fg)}
+ul,ol{padding-left:22px;margin:0 0 16px}li{margin-bottom:9px;color:#d3d1cb}
+li b{color:var(--fg)}
+blockquote{border-left:2px solid var(--acc);padding:4px 0 4px 20px;margin:20px 0;color:#c3c1bb;font-size:15.5px}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14.5px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--dim);font-weight:500;font-size:13px}
+code{font-family:ui-monospace,monospace;font-size:13px;background:#191d22;padding:1px 5px;border-radius:4px;color:#bcaf90}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin:15px 0}
+.card .claim{font-size:16.5px;font-weight:600;line-height:1.55;margin-bottom:8px}
+.card .claim i{color:var(--acc);font-style:normal;font-family:ui-monospace,monospace;font-size:13px;margin-right:8px}
+.tag{display:inline-block;font-size:11.5px;border:1px solid #2c3b2c;border-radius:999px;padding:1px 9px;color:var(--acc);margin-left:8px;vertical-align:2px;font-weight:400}
+.tag.warn{border-color:#3d3126;color:var(--acc2)}
+.warn{border:1px solid #3a2f22;background:#191512;border-radius:9px;padding:16px 20px;margin:18px 0}
+.warn b{color:var(--acc2)}
+.hard{border:1px solid #3a2622;background:#1a1311;border-radius:9px;padding:16px 20px;margin:18px 0}
+.hard b{color:var(--red)}
+.foot{margin-top:76px;padding-top:20px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+.yes{color:var(--acc)}.no{color:var(--red)}
+</style>
+</head>
+<body><div class="wrap">
+
+<h1>这东西跟 SCI 有关系吗<br><em>· 以及你到底该往哪个方向写</em></h1>
+<div class="sub">Morrow 学生工作区 · 第三部分 · 2026-11</div>
+
+<h2><span class="n">00</span>先分开两件被你混在一起的事</h2>
+<p class="lead">你问"能不能发一篇不错的 HCI 论文"，同时又问"跟 SCI 有没有关系"。这是两个不同的评价体系，混着问会得出"好像哪边都不够"的错觉。</p>
+<table>
+<tr><th></th><th>SCI / SSCI 期刊</th><th>HCI 顶会</th></tr>
+<tr><td>代表</td><td>IJHCI、IJTDE、Behaviour &amp; IT、Computers &amp; Education</td><td>CHI、CSCW、DIS、UIST</td></tr>
+<tr><td>性质</td><td>期刊，进 WoS 索引，国内有分区</td><td><b>会议，不进 SCI</b></td></tr>
+<tr><td>谁认它</td><td>国内毕业硬指标、评奖、申博材料、多数院校考核表</td><td>国际同行、HCI 圈内的学术声誉</td></tr>
+<tr><td>审稿</td><td>6–18 个月，改两三稿很常见</td><td>一轮 2–4 个月，一次定生死（CHI 近年有返修窗口）</td></tr>
+<tr><td>偏好</td><td>完整的故事、真实场景、清楚的设计含义</td><td>方法 rigor、新颖的机制、能刺激同行的发现</td></tr>
+</table>
+<p><b>结论第一层：SCI 和 CHI 不是同一条路，但你的东西两边都能走。</b>你要先回答一个现实问题——你现在的硬指标是哪一种？毕业/评奖要 SCI，那就是期刊路线；要在这个圈子里有名字，就是顶会路线。两个都要，就得分两次写（同一批数据可以，改动 60% 以上）。</p>
+<p>另外别被"SCI"这个词的含金量骗了：<b>中科院四区的 SCI 在设计教育方向上并不比一篇 CHI 全篇更容易，只是它更像一道行政门槛。</b>反过来，一篇 CHI full paper 在很多国内评审表里也认，只是不叫 SCI。</p>
+
+<h2><span class="n">01</span>「这是纯软件」——这句自我判断，八成对，两成错</h2>
+<p class="lead">对的那八成：2026 年，用一个 LLM API 搭一个多模态工作区，任何会用 Cursor 的设计师两周能做出原型。<b>软件本身在这个圈子里已经没有创新溢价了。</b>如果你把贡献落在"我实现了一个系统"，无论投哪里都会被当 demo 或被要求"再多做几个功能"。</p>
+<p>错的那两成：你手上真正稀缺的不是代码，是下面这三样——而这三样恰好是审稿人最买不到的东西：</p>
+<ol>
+<li><b>一个真实的课堂</b>。真团队、真 deadline、真评分、真情绪。实验室里的受试者不会因为同伴不干活而生气。</li>
+<li><b>过程日志</b>。别人做研究要专门造情境去收集，你是顺带产生的。</li>
+<li><b>能就地操纵参数</b>。同一门课，两种可见性设置，这在实验室里做不出来。</li>
+</ol>
+<blockquote>所以正确的定位不是"我做了一个系统"，而是：<b>系统是仪器，不是贡献。</b>论文的主角是"在这种仪器下看见的人的行为"，而仪器恰好由你造。这句话你在任何答辩场合都可以直接说。</blockquote>
+
+<h2><span class="n">02</span>「创新性不够」——你这个直觉对了一半，但错在找的地方</h2>
+<p>你在找一个**没人做过的功能**。那是产品思维。HCI 里，创新的定义是：</p>
+<blockquote class="lead">命名一个此前没有被命名的问题，并证明它重要。<br><span style="color:var(--dim);font-size:15px">——不是"我做了一个别人没做过的功能"</span></blockquote>
+<p>按这个定义重新审视你自己：你其实已经摸到一个没被命名的问题了，只是你把它说成了"新的 workshop 模式"。那个问题是：</p>
+<div class="card">
+<div class="claim">当 AI 成为事实上的团队成员之后，<b>团队创作的评价单位失效了</b></div>
+<p style="margin:0;color:#cfcdc7;font-size:15px">设计教育几百年来的评分单位是"团队作品 + 个人成长"。作品集是这套体系的证据。但当作品里混着大量 agent 的产出，而且这些产出<b>不署名、不可追溯、不区分谁调用的</b>，作品就不再能证明人做了什么。于是评价退化成"看谁最后交得多"——而这件事在 agent 时代一个人就能伪造。<br><br>这不是效率问题，是<b>教学公平与评价效度</b>的问题。而且它对所有做创意团队协作的领域都成立，不只你的课。</p>
+</div>
+<p><b>这个问题足够大，大到你不需要靠功能取胜。</b>它同时挂着三件正在发生的事：AI 的署名与披露规范、AI 作为团队成员（hybrid teaming）、以及设计教育的评价改革。你在做的那 14 张界面，只是这个问题的现场。</p>
+
+<h2><span class="n">03</span>前沿在哪：三条热线的交汇处，恰好是你的位置</h2>
+<table>
+<tr><th>正在热的线</th><th>大家在做什么</th><th>缺什么（=你的空位）</th></tr>
+<tr><td>AI 与创作者身份 / 署名与披露</td><td>大量单人的、文本或图像共写的实验；AI 披露标签的设计</td><td><b>团队层面</b>的归因：四个人的组里，贡献怎么被看见、被记录、被追责</td></tr>
+<tr><td>AI as teammate / hybrid teaming</td><td>组织行为学与 CSCW 里的 AI 队友研究，多在决策、写作、编程任务</td><td><b>创意任务</b>里的 AI 队友，尤其"AI 由谁调用"这件事带来的社会后果</td></tr>
+<tr><td>AI 与设计教育 / crit</td><td>近两年增长很快，多为"AI 当助教/给反馈"的工具论文</td><td>把 crit 的<b>组织形式</b>当对象，而不是把 AI 当插件</td></tr>
+</table>
+<p>三条线的交点是一句话：<b>在一个 AI 也在场的创意团队里，过程如何被看见，决定了贡献如何被承认。</b>这句话既是你的前沿，也是你五轴设计空间里 B 轴与 E 轴的理论依据。你已经把它做出来了，只是还没把它命名出来。</p>
+
+<h2><span class="n">04</span>往哪个方向写：三层递进，别一次全要</h2>
+
+<div class="card">
+<div class="claim"><i>层一</i>部署型实证 · 稳，能出 SCI 期刊<span class="tag">先做这个</span></div>
+<p style="margin:0 0 8px;color:#cfcdc7;font-size:15px"><b>写什么</b>：一门真实课程、若干团队、一个学期的 AI 参与创作。以<b>过程可见性</b>为操纵变量，测团队贡献的归因准确度、协作公平感、以及教师评价的效度。方法：团队自评贡献 vs 教师盲判 vs 系统日志，三者一致性（ICC / 偏差），加访谈。</p>
+<p style="margin:0;color:#cfcdc7;font-size:15px"><b>为什么稳</b>：期刊最爱的就是"真实课堂 + 真实数据 + 清楚的设计含义"。你不需要惊天动地的发现，只需要一条站得住的观察加一套能复用的做法。<b>这条即使结果是"没有明显偏差"也能发</b>——那说明 AI 没破坏教学公平，是个有用的公共结论。</p>
+</div>
+
+<div class="card">
+<div class="claim"><i>层二</i>概念与方法论 · 定你的名字，投 DIS / CHI</div>
+<p style="margin:0 0 8px;color:#cfcdc7;font-size:15px"><b>写什么</b>：把 legible studio 写成一份<b>规格</b>——五轴设计空间、每个轴你的选择与理由、被否决的替代方案、什么时候会失效。配层一的一条硬证据。</p>
+<p style="margin:0;color:#cfcdc7;font-size:15px"><b>收益</b>：这条决定以后别人引不引你。层一让你毕业，层二让你在这个圈子里有名字。</p>
+<p style="margin:0;color:#cfcdc7;font-size:15px"><b>成本</b>：需要把系统写成"可复现的形式"而不是截图集，这活儿不难但很花时间，而且必须能回答"为什么不能就用微信群 + ChatGPT"。</p>
+</div>
+
+<div class="card">
+<div class="claim"><i>层三</i>批判性立场 · 搏一把，投 CSCW / TOCHI 特刊<span class="tag warn">可选</span></div>
+<p style="margin:0 0 8px;color:#cfcdc7;font-size:15px"><b>写什么</b>："作品集作为证据的终结"——当过程不可归因，设计教育赖以运转的证据链断裂了，我们需要新的证据形式。这是 opinion / critical 类，要求你读得够深、立场够硬。</p>
+<p style="margin:0;color:#cfcdc7;font-size:15px"><b>风险</b>：这类文章吃资历，学生写容易被批"论述不充分"。<b>建议：先把它写成一篇中文长文或会议短文（如 CHI Poster 旁边的 workshop paper），拿到反馈再升级。</b></p>
+</div>
+
+<h2><span class="n">05</span>让「软件」变成「研究」的三个动作（不用写新功能）</h2>
+<ol>
+<li><b>把系统变成可操纵的仪器</b>：同一份代码，做出两三种参数配置（可见性开/关、调用权组内/个人）。你已经有这些界面元素，只需要能让它们被切换、被记录。<b>这一步不增加一个功能，只增加一个开关。</b></li>
+<li><b>加一个"非软件"的对照条件</b>：同样的工作坊，用原来的方式（微信群 + 邮件 + 线下 crit），只是没有过程可见性。没有对照，你写的是课程报告；有对照，你写的是研究。<b>这是最容易被忽略、也最致命的一步。</b></li>
+<li><b>操作化一个理论术语并测量它</b>：归因（attribution）、问责（accountability）、心理安全（psychological safety）、反思性实践（reflective practice）——挑一个，找现成量表，测两次。有了这个术语，你的发现才能和别人的文献对话，而不是只和你自己的界面对话。</li>
+</ol>
+
+<h2><span class="n">06</span>期刊候选（分区请你自己核，我只给方向）</h2>
+<table>
+<tr><th>期刊</th><th>为什么适合你</th><th>难度</th></tr>
+<tr><td><b>International Journal of Technology and Design Education</b></td><td>设计教育专业刊，SCIE + SSCI 双检索（2025 年 JIF 约 2.9，中科院教育类四区）。它明确欢迎"从社会学、心理学、哲学文献出发"的设计教育研究，对设计出身的作者友好，审稿人看得懂 crit 是什么。<b>这是我最推荐的第一站。</b></td><td>中低</td></tr>
+<tr><td>International Journal of Human-Computer Interaction</td><td>HCI 老牌刊，对"系统 + 用户研究"的混合稿接受度高，比 CHI 宽松</td><td>中</td></tr>
+<tr><td>Behaviour &amp; Information Technology</td><td>偏应用与行为测量，喜欢有量表的实证</td><td>中</td></tr>
+<tr><td>International Journal of Design / Design Studies</td><td>设计研究本体，理论味重，需要你读得深</td><td>中高</td></tr>
+<tr><td>Computers &amp; Education</td><td>教育技术顶刊，影响因子高；但要求学习结果测量（前后测、延迟测），你得真做实验</td><td>高</td></tr>
+<tr><td>Interacting with Computers / IJHCS</td><td>正统 HCI 期刊，方法要求接近 CHI</td><td>中高</td></tr>
+</table>
+<div class="warn"><b>必须自己核的两件事</b>：① 目标刊在你学校认定的分区表里是几区、算不算 SCI/SSCI（有些学校只认 SCIE 不认 SSCI，反之亦有）；② 是否已转全开放获取、APC 多少。IJTDE 我看到的信息是已转为完全 OA，APC 约 3000 美元级——如果是自费，这笔钱要提前和导师谈。<b>这些数据每季度都在变，以上仅供筛选，投稿前以期刊官网与 JCR 为准。</b></div>
+<p style="color:var(--dim);font-size:14px">补充：如果硬指标只是"发一篇核心"，中文路线更快——装饰（CSSCI）、包装工程（北大核心）、南京艺术学院学报都能容下这个题目，写作语感和评审逻辑与英文刊不同，见下一节。</p>
+
+<h2><span class="n">07</span>国内语境和英文语境，写法不一样</h2>
+<table>
+<tr><th></th><th>投中文核心 / 国内评审</th><th>投英文刊 / 顶会</th></tr>
+<tr><td>开篇</td><td>政策语境（人工智能+教育、教育数字化、新文科、设计学交叉）</td><td>一个具体的观察或一个反直觉的现象</td></tr>
+<tr><td>创新点的说法</td><td>"构建了……框架 / 提出了……模式 / 形成了……路径"</td><td>"we characterize / we identify / we show that"</td></tr>
+<tr><td>实证的分量</td><td>案例 + 教学效果 + 学生反馈即可</td><td>对照条件、N、测量、编码一致性，缺一不可</td></tr>
+<tr><td>忌讳</td><td>通篇英文文献、看不到本土教学情境</td><td>通篇"我们认为"、没有可被反驳的 claim</td></tr>
+</table>
+<p>两条线不冲突，但<b>不要用同一份稿子改语言</b>。中文那版要重写开篇和结论，英文那版要重写方法和讨论。同一批数据用两次是正当的，只要两篇的 claim 不同。</p>
+
+<h2><span class="n">08</span>接下来三个月（按层一倒推）</h2>
+<table>
+<tr><th>时间</th><th>做什么</th><th>过关标准</th></tr>
+<tr><td>第 1–2 周</td><td>确认硬指标（SCI / 核心 / 顶会），定第一个目标刊；写 1 页 proposal</td><td>能对导师讲 3 分钟，他能说出你要证明什么</td></tr>
+<tr><td>第 2–4 周</td><td>给系统加两个开关（可见性、调用权）+ 补日志字段</td><td>两种配置都能跑完一整条团队流程</td></tr>
+<tr><td>第 4–5 周</td><td>做对照条件的方案（同一门课，前半个学期一种配置，后半个学期另一种，或两个平行班）</td><td>伦理/知情同意模板拿到手</td></tr>
+<tr><td>第 5–10 周</td><td>真实部署，边跑边收数据</td><td>日志完整率 &gt; 90%，每个团队至少一次访谈</td></tr>
+<tr><td>第 10–12 周</td><td>分析 + 按目标刊格式写初稿</td><td>有一张能放进论文的核心图表（三方可视化：自评/教师/日志）</td></tr>
+</table>
+<div class="hard"><b>最坏情况与备案</b>：如果课开不起来、或者团队招不齐，层一就退化成<b>回溯研究</b>——用你上学期已经产生的日志做二次分析，再补 6–8 个访谈。这条路学术分量略低，但依然可以成文，而且<b>现在就该确认：你之前那些项目的日志还在不在、能不能导出。</b>如果日志没留，这是唯一一件无法补救的事。</div>
+
+<div class="foot">
+一句话回答你的问题：<b>跟 SCI 有关系，但不是因为你写了软件，而是因为你手上有一个真实课堂和真实团队——那是期刊买不到的东西。</b>你说的"创新不够"，是因为你在找没人做过的功能；换成找一个没人命名的问题，你手上已经有答案了：<b>AI 进入创意团队之后，贡献变得不可归因，团队创作的评分体系因此失效。</b>先写这条，用一层一的实证去撑它，软件只是你做实验的那台仪器。
+</div>
+
+</div></body></html>
