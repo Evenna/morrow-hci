@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Morrow · 论文完整方案：文献 / 方向 / 会议 / 实验 / 结构</title>
+<style>
+body{margin:0;background:#0a0b0e;color:#d9dbe0;font:15.5px/1.75 -apple-system,"PingFang SC","Noto Sans SC",sans-serif}
+.w{max-width:960px;margin:0 auto;padding:48px 22px 120px}
+h1{font-size:28px;color:#fff;margin:0 0 6px}h2{font-size:21px;color:#d8a94f;margin:56px 0 12px;border-top:1px solid #222;padding-top:26px}
+h3{font-size:16.5px;color:#7fa8c9;margin:26px 0 8px}
+.sub{color:#8a8f99;font-size:13.5px}.sub a{color:#7fa8c9}
+a{color:#7fa8c9}b,strong{color:#fff}
+.box{background:#12141a;border:1px solid #23262f;border-radius:10px;padding:16px 20px;margin:14px 0}
+.gold{border-left:3px solid #d8a94f}.green{border-left:3px solid #8fb58a}.red{border-left:3px solid #c46a5a}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:10px 0}
+th,td{border-bottom:1px solid #23262f;padding:8px 8px;text-align:left;vertical-align:top}th{color:#d8a94f;font-weight:600}
+.tag{display:inline-block;font-size:12px;padding:0 7px;border-radius:9px;background:#1d2a1d;color:#8fb58a;margin-right:4px}
+.warn{background:#2a1f12;color:#d8a94f}.k{color:#8fb58a}
+code{background:#1a1c22;padding:1px 5px;border-radius:4px;font-size:13px}
+ol li,ul li{margin:4px 0}.q{color:#fff;font-size:17px}
+.en{font-family:Georgia,serif;color:#cfd3da;font-size:15px}
+</style></head><body><div class="w">
+<h1>Morrow 论文完整方案</h1>
+<div class="sub">文献调研 → 方向判定 → 投哪 → 实验怎么做 → 文章怎么写 → 时间表 · 2026-11-27 · <a href="index.html">返回主篇</a> · <a href="ambitious.html">野心版命题</a> · <a href="gallery.html">UI 概念图</a> · <a href="paper.html"><b>★论文正文初稿</b></a></div>
+
+<div class="box gold">
+<p class="q">一句话结论</p>
+<ul>
+<li><b>方向</b>：做「双重归属（dual attribution）」。当 AI 同时参与<b>做作品</b>和<b>评作品</b>时，学生既说不清哪部分是自己做的，也说不清好坏该由谁的标准来定；论文要验证这两种丧失<b>叠加起来比单独相加更严重</b>。</li>
+<li><b>主投</b>：<b>CHI 2028 Full Paper</b>（往年截稿在 9 月中，即 2027 年 9 月，<span class="tag warn">待官网核</span>）。<b>备投</b>：CSCW（PACM HCI 滚动截稿）。<b>先破零</b>：用试点数据投 CHI 2027 Late-Breaking Work 或 C&amp;C 2027（往年在 1–2 月，<span class="tag warn">待核</span>）。中文/SCI 线另投 IJTDE，主张须重写，不能照搬。</li>
+<li><b>实验</b>：先做 Study 1 形成性研究（现有课程日志 + 访谈，2 个月），再做 Study 2 主实验。主实验用 2×2 被试内设计：<b>agent 调用可见/私有 × 评图来自老师/来自 AI</b>，16 个 4 人团队，4 个短冲刺，拉丁方排序。2027 年春季学期跑完。</li>
+<li><b>为什么现在能做</b>：文献里最接近的 Park（IASDR 2025）只用定性访谈<b>描述</b>了「AI 打乱对话式评图、削弱创作主体性、责任扩散」，没人<b>操纵变量去测机制</b>，你的平台刚好能当这个实验仪器。</li>
+</ul></div>
+
+<h2>一、文献调研：这个领域现在长什么样</h2>
+<div class="box"><span class="tag">核实状态</span>下文所有带 DOI 的条目，题目、作者、年份、出处都已通过 Crossref / OpenAlex <b>逐条核实</b>（2026-11-27）。「观点」一栏依据的是<b>官方摘要</b>，全文我没读，精读时以原文为准。旧清单里 15 篇标「待核」的现在全部核实通过。</div>
+
+<h3>格局：四股文献正在汇流，但交汇点是空的</h3>
+<table>
+<tr><th>文献线</th><th>它已经证明了什么</th><th>它没碰的</th></tr>
+<tr><td>A 作者归属<br>（AI 写作/创作）</td><td>用 AI 后心理所有权下降，但人不愿把功劳记给 AI（Draxler 2024）；同等贡献下 AI 得到的署名更少（He 2025）；可视化创作过程能保住所有权（Hoque 2024）</td><td>几乎都是<b>个人 + 写作</b>，没有团队，也没有「评价者是谁」这个变量</td></tr>
+<tr><td>B 评图/批评</td><td>众包评图可以结构化（CrowdCrit 2015）；新手评语也能接近专家（Yuan 2016）；建筑评图有理论框架（Oh 2013）</td><td>都在 GenAI 之前，默认「评价标准有一个明确的拥有者」</td></tr>
+<tr><td>C 团队 + AI</td><td>团队协作提示时，同伴会降低对 AI 的依赖（Han 2024，被引 189）；AI 队友的「监控」被当成支持还是监视（Weng 2026）；独立游戏小团队把 AI 当潜在队友（Panchanadikar 2026）</td><td>不关心<b>教育评价</b>，也不关心「谁该被记功」</td></tr>
+<tr><td>D GenAI 进入设计教育（<b>新补的缺口</b>）</td><td>Park 2025 指出 GenAI 打乱对话式评图、削弱主体性、让学习过程变得不透明；学生会选择性地用 AI（Huh 2026，N=112）；老师对 AI 评图有期待也有顾虑（Li 2025，10 位老师）</td><td>全是<b>问卷/访谈/观点</b>，<b>没有一篇做了操纵实验</b></td></tr>
+</table>
+<div class="box green"><b>你的位置</b>：A 线只研究了「作者」这一根支柱，B 线只研究了「评价者」，D 线定性地看到两根都在晃，但没人问<b>两者是否相互依赖</b>。你的论文就站在 A×B 的交点上，用 D 线的场景，再借 C 线的团队分析单位。</div>
+
+<h3>最该精读的 8 篇（按优先级）</h3>
+<table>
+<tr><th>#</th><th>论文</th><th>核心观点（据摘要）</th><th>对你的用处</th></tr>
+<tr><td>1</td><td>Park, <i>Generative AI in Studio-Based Design Education: Human–AI Relationships, Collaboration and Assessment</i>, IASDR 2025 · <a href="https://doi.org/10.21606/iasdr.2025.845">doi</a></td><td>定性研究：GenAI 打乱对话式评图、削弱创作主体性、扩散伦理责任、让学习过程变得不透明；作者主张让过程透明化</td><td><b>最近的竞争者，也是你的起跳板</b>。它提出主张，你来检验机制。还要反驳它的药方：「过程透明」本身不够，因为评价标准由谁定这个问题它没处理</td></tr>
+<tr><td>2</td><td>Draxler et al., <i>The AI Ghostwriter Effect</i>, TOCHI 2024 · <a href="https://doi.org/10.1145/3637875">doi</a></td><td>心理所有权低，但不愿把功劳记给 AI</td><td>「作者归属」这根支柱的核心引用</td></tr>
+<tr><td>3</td><td>He, Houde, Weisz, <i>Which Contributions Deserve Credit?</i>, CHI 2025 · <a href="https://doi.org/10.1145/3706598.3713522">doi</a></td><td>N=155，同等贡献下 AI 获得的署名更少</td><td>你的「贡献分配 100 分」测量直接借它的思路</td></tr>
+<tr><td>4</td><td>Jakesch et al., <i>Co-Writing with Opinionated Language Models Affects Users' Views</i>, CHI 2023 · <a href="https://doi.org/10.1145/3544548.3581196">doi</a></td><td>带倾向的模型会悄悄改变用户的观点</td><td>「评价标准被 AI 悄悄植入」的直接先例，是标准内化测量的理论依据</td></tr>
+<tr><td>5</td><td>Han, Qiu, Cheng, Lc, <i>When Teams Embrace AI</i>, CHI 2024 · <a href="https://doi.org/10.1145/3613904.3642133">doi</a></td><td>设计学生两两配对、和 GenAI 一起做舞台设计；同伴降低了对 AI 的依赖，AI 被看作工具而非队友</td><td>最近的团队+设计学生实验，但它<b>没有操纵可见性和评价来源</b>。你的研究设计要明确写出比它多了哪些变量</td></tr>
+<tr><td>6</td><td>Han &amp; Martelaro, <i>Enacting Constructive Conflicts with AI Agents…</i>, ACM 2026（<span class="tag warn">会议名待核</span>） · <a href="https://doi.org/10.1145/3841580.3841587">doi</a></td><td>45 名设计学生、3 组被试间实验：AI 扮演反对者，能提高学生的再思考</td><td>说明「AI 当批评者」已是热点，而你问的是更深一层：<b>批评权威转移的代价</b>。实验和测量写法可以照它的格式</td></tr>
+<tr><td>7</td><td>Fu et al., <i>Decoupling of Usefulness and Novelty</i>, CHI 2026 · <a href="https://doi.org/10.1145/3772318.3791329">doi</a></td><td>36 人被试内实验：AI 辅助的设计被评为更新颖，但甲方认为品牌契合度没有提升</td><td>极好的证据：「好不好」取决于<b>谁的标准</b>，甲方和路人给出的判断不一样，正好支撑标准归属这根支柱</td></tr>
+<tr><td>8</td><td>Okazaki et al., <i>Delegating Design Critique to AI While Preserving Human Decision Authority</i>, ACM 2026 WIP（<span class="tag warn">会议名待核</span>） · <a href="https://doi.org/10.1145/3841580.3845722">doi</a></td><td>业界原型：AI 只列出标准、顾虑和不确定点，不打分，最终决策权留给人</td><td>业界已经在用直觉设计「保住人的决策权」，你提供实证依据；Discussion 里可以把它当设计启示的案例</td></tr>
+</table>
+
+<h3>理论底座与方法模板（引用即可，不必精读）</h3>
+<table>
+<tr><th>用途</th><th>论文</th></tr>
+<tr><td>心理所有权理论</td><td>Pierce, Kostova, Dirks, AMR 2001 · <a href="https://doi.org/10.5465/AMR.2001.4378028">doi</a>；Hong &amp; Lee, CHI 2026（AI 主导时所有权对满意度的正效应变弱）· <a href="https://doi.org/10.1145/3772318.3791002">doi</a></td></tr>
+<tr><td>社会懈怠 / 贡献不可识别</td><td>Latané, Williams, Harkins, JPSP 1979 · <a href="https://doi.org/10.1037/0022-3514.37.6.822">doi</a>；Karau &amp; Williams, JPSP 1993 · <a href="https://doi.org/10.1037/0022-3514.65.4.681">doi</a></td></tr>
+<tr><td>评图 / 批评</td><td>Luther et al. CrowdCrit, CSCW 2015 · <a href="https://doi.org/10.1145/2675133.2675283">doi</a>；Yuan, Luther, Krause, CSCW 2016 · <a href="https://doi.org/10.1145/2818048.2819953">doi</a>；Krause et al., CHI 2017 · <a href="https://doi.org/10.1145/3025453.3025883">doi</a>；Kulkarni et al., TOCHI 2013 · <a href="https://doi.org/10.1145/2505057">doi</a>；Oh, Ishizaki, Gross, Design Studies 2013 · <a href="https://doi.org/10.1016/j.destud.2012.08.004">doi</a>；Schön 1983/1987（书）</td></tr>
+<tr><td>谁的标准（LLM 评价）</td><td>Chiang et al., <i>MultEval</i>, ACM 2026（<span class="tag warn">会议名待核</span>） · <a href="https://doi.org/10.1145/3808045.3808093">doi</a>：评价标准常由一个人定，默认嵌入了这个人的假设。可作为「标准归属」的跨领域旁证</td></tr>
+<tr><td>同质化 / 固着</td><td>Wadinambiarachchi et al., CHI 2024（N=60，AI 图像让设计固着更严重）· <a href="https://doi.org/10.1145/3613904.3642919">doi</a>；Doshi &amp; Hauser, Sci. Adv. 2024 · <a href="https://doi.org/10.1126/sciadv.adn5290">doi</a>；Anderson et al., C&amp;C 2024 · <a href="https://doi.org/10.1145/3635636.3656204">doi</a>；Dalsgaard, NordiCHI 2026，提出 <i>combinatorial capture</i> 概念 · <a href="https://doi.org/10.1145/3829807.3829905">doi</a></td></tr>
+<tr><td>批判性思维</td><td>Lee, Sarkar et al., CHI 2025 · <a href="https://doi.org/10.1145/3706598.3713778">doi</a>；Buçinca et al., CSCW 2021 · <a href="https://doi.org/10.1145/3449287">doi</a></td></tr>
+<tr><td>方法模板</td><td>Dhillon et al., CHI 2024（拉丁方被试内设计）· <a href="https://doi.org/10.1145/3613904.3642134">doi</a>；Lee, Liang, Yang, CoAuthor, CHI 2022（过程日志）· <a href="https://doi.org/10.1145/3491102.3502030">doi</a></td></tr>
+<tr><td>团队 + 共享屏 / AI 队友</td><td>Zhang et al., LADICA, CHI 2025 · <a href="https://doi.org/10.1145/3706598.3713289">doi</a>；Weng et al., PACM HCI 2026 · <a href="https://doi.org/10.1145/3799437">doi</a>；Panchanadikar &amp; Freeman, CHI 2026 · <a href="https://doi.org/10.1145/3772318.3790869">doi</a>；Won et al., CHI 2026 EA（同样的行为，标成 AI 后创造力评分更低）· <a href="https://doi.org/10.1145/3772363.3799001">doi</a></td></tr>
+<tr><td>设计教育场景</td><td>Huh, Tural, Tural, Educ. Sci. 2026（N=112）· <a href="https://doi.org/10.3390/educsci16101634">doi</a>；Li, Hu, Liu, IASDR 2025 · <a href="https://doi.org/10.21606/iasdr.2025.394">doi</a>；Schmitt-Fumian et al., NordDesign 2026（25 名学生 + 6 名教授）· <a href="https://doi.org/10.35199/norddesign2026.68">doi</a>；Fang et al., Design Studies 2025 综述 · <a href="https://doi.org/10.1016/j.destud.2025.101300">doi</a>；Ojeda-Ramírez et al., IDC 2026 · <a href="https://doi.org/10.1145/3773077.3812170">doi</a></td></tr>
+</table>
+
+<h2>二、方向判定：为什么是这一条，以及边界</h2>
+<div class="box">
+<p><b>研究问题</b></p>
+<ol>
+<li>RQ1：当 agent 调用对团队<b>不可见</b>时，团队成员和老师对「谁贡献了什么」的判断会偏离多少？（以日志为基准）</li>
+<li>RQ2：当评图来自 AI 而不是老师时，学生做判断时用的是谁的标准？（测标准内化）</li>
+<li>RQ3（核心，也是野心所在）：两者叠加时，学生的作者感和为设计辩护的能力，是否出现<b>超加性</b>下降？</li>
+</ol>
+<p><b>和最近的工作怎么区分（写进 Related Work 最后一段）</b></p>
+<ul>
+<li>相对 Park 2025：他们<b>描述现象</b>，你<b>检验机制</b>；他们开的药方是「过程透明」，你证明光透明不够，还要处理标准由谁定。</li>
+<li>相对 Han 2024 / Han &amp; Martelaro 2026：他们把 AI 当<b>协作者或反对者</b>来优化产出，你研究的是 AI 进入后<b>权威结构</b>发生了什么。</li>
+<li>相对 Draxler / He / Hoque：他们研究<b>个人写作的署名</b>，你研究的是<b>团队、加上评价者</b>的情况。</li>
+</ul>
+<p><b>主张的边界</b>：结论只对「有明确评价者的教学情境」负责，不推广到职业设计团队；也不声称 AI 评图就是坏的，只说权威转移有代价，需要设计「授权机制」来承接。</p>
+</div>
+<div class="box red"><b>如果交互项不显著</b>，论文照样能发，改写成「两种权威彼此独立，可以分开设计」，这同样是新知识。所以要提前预注册，并把这一点写进 Limitations。</div>
+
+<h2>三、投哪：会议选择</h2>
+<table>
+<tr><th>会议</th><th>往年截稿规律</th><th>适合程度</th><th>判断</th></tr>
+<tr><td><b>CHI 2028 Full</b></td><td>约 9 月中（2027 年）<span class="tag warn">待核</span>；11 月有一次 revise &amp; resubmit</td><td>★★★★★</td><td><b>主投</b>。混合方法 + 理论主张 + 设计启示，正是 CHI Learning/Education 和 Critical Computing 方向会收的形态</td></tr>
+<tr><td>CSCW（PACM HCI）</td><td>一年多轮滚动截稿 <span class="tag warn">待核</span></td><td>★★★★</td><td>团队 + 权威结构很对 CSCW 的口味，适合作 CHI 被拒后的首选备投，审稿意见通常更细</td></tr>
+<tr><td>DIS 2028</td><td>约 1 月 <span class="tag warn">待核</span></td><td>★★★</td><td>如果偏重「设计空间 + 授权机制」，可以改投 DIS</td></tr>
+<tr><td>C&amp;C 2027 / CHI 2027 LBW</td><td>约 1–2 月 <span class="tag warn">待核</span></td><td>★★★（破零用）</td><td>投 Study 1 形成性结果或试点数据，4–6 页，先占住 <i>dual attribution</i> 这个名字</td></tr>
+<tr><td>IJTDE（SCIE/SSCI）</td><td>随时投，中位约 286 天</td><td>★★★</td><td>满足学校考核。用同一批数据写<b>教学实践</b>这条线，主张要和 CHI 那篇不同，避免重复发表</td></tr>
+</table>
+<p class="sub">CHI 2027 的正刊已经截稿（往年在 9 月），所以主战场定在 CHI 2028。每个日期都请到官网核对：chi2027.acm.org / cscw.acm.org / dis.acm.org。</p>
+
+<h2>四、实验设计（详细版）</h2>
+
+<h3>Study 1 · 形成性研究（2026 年 12 月 – 2027 年 1 月，约 6 周）</h3>
+<table>
+<tr><th>项</th><th>内容</th></tr>
+<tr><td>目的</td><td>①证明现象真实存在（不是你的假设）；②为 Study 2 提炼测量词表和评图语料</td></tr>
+<tr><td>数据</td><td>已有课程或项目的 Morrow 日志（如果还在）+ 半结构访谈：学生 12–16 人、老师 3–4 人</td></tr>
+<tr><td>访谈提纲要点</td><td>「这部分是谁做的？你怎么知道？」「你最后认定它好，是因为谁说了它好？」「AI 的评语和老师的评语冲突时你听谁的？」</td></tr>
+<tr><td>分析</td><td>reflexive thematic analysis（Braun &amp; Clarke），两人编码，讨论到一致。日志部分算：每人调用 agent 次数、采纳率、修改率、组内调用的基尼系数</td></tr>
+<tr><td>产出</td><td>①现象证据，写进论文 Section 3；②「教师词表 / AI 词表」初版；③可单独投一篇 LBW</td></tr>
+</table>
+
+<h3>Study 2 · 主实验：2×2 被试内设计，拉丁方排序</h3>
+<table>
+<tr><th>项</th><th>内容</th></tr>
+<tr><td>参与者</td><td>设计专业本科高年级或研一，<b>16 个 4 人团队，共 64 人</b>，在一门真实课程里招募，自愿参加</td></tr>
+<tr><td>结构</td><td>课程中嵌入 <b>4 个短设计冲刺</b>，每个约 1 周（两次课 + 课下时间）。题目难度预先匹配，例如四个同级别的服务设计小题。每个冲刺对应一种条件，16 组按 4×4 拉丁方分成 4 组序列，平衡条件顺序和题目搭配</td></tr>
+<tr><td>因素 A：agent 可见性</td><td><b>可见</b>：每次调用 agent 都自动上墙到团队时间轴，显示调用人、提示词、输出，以及哪些部分被采纳进画布（Morrow 已有的过程时间轴）。<br><b>私有</b>：agent 只出现在个人面板里，输出复制到画布后不留痕迹，模拟「另开一个 ChatGPT 窗口」</td></tr>
+<tr><td>因素 B：评图权威</td><td><b>老师</b>：冲刺中期由老师进行 15 分钟评图（现场或书面）。<br><b>AI</b>：中期评图换成 AI 评图员（多模态模型 + 固定提示词，输出结构化评语），老师不出面。<br>两种条件下终评都由同一位老师打分（教学公平），但终评分数<b>不作为因变量</b></td></tr>
+<tr><td>操纵检验</td><td>每个冲刺结束后问：「你能看到队友怎么用 AI 吗？」「这次的中期意见来自谁？」</td></tr>
+<tr><td>伦理</td><td>报清华伦理审查；条件不影响成绩（终评统一按 rubric）；实验结束后为 AI 评图冲刺补发老师反馈，避免教学受损；日志匿名化；可随时退出</td></tr>
+</table>
+
+<h3>测量（每个冲刺结束时测一次，约 25 分钟）</h3>
+<table>
+<tr><th>构念</th><th>测法</th><th>对应支柱</th></tr>
+<tr><td>贡献归属准确度</td><td>每人把 100 分分给自己、每位队友和 AI，与<b>日志推算的贡献份额</b>比较，误差越大说明归属越失真。老师也盲估一次</td><td>作者归属</td></tr>
+<tr><td>心理所有权</td><td>改编自现有的心理所有权量表（Van Dyne &amp; Pierce 2004 一系）<span class="tag warn">量表原文待核</span>，指向本冲刺作品，7 点量表</td><td>作者归属</td></tr>
+<tr><td><b>标准内化（核心测量）</b></td><td>给出 2 件<b>没见过的</b>同题作品：一件符合老师标准，一件是 AI 偏好的风格（由 Study 1 语料构造）。学生挑出更好的一件并写 100 字理由。理由按词表编码为「老师词汇 / AI 词汇 / 自己的或其他」，词表来自本冲刺实际出现的评语文本。两人编码，Cohen's κ ≥ 0.7</td><td>标准归属</td></tr>
+<tr><td>设计辩护能力</td><td>3 分钟口头说明「为什么这个方案是好的」，录音，由不知道条件的外请老师按 rubric 打分</td><td>两者的交汇点（承担）</td></tr>
+<tr><td>行为日志</td><td>调用次数、采纳率、对 AI 输出的修改量、组内调用的基尼系数、评语被回应的比例</td><td>过程</td></tr>
+<tr><td>访谈</td><td>全部冲刺结束后，抽 20 名学生 + 全部老师，各 30 分钟</td><td>解释机制</td></tr>
+</table>
+
+<h3>假设（预注册到 OSF 或 AsPredicted）</h3>
+<ol>
+<li>H1：私有条件下贡献归属误差更大（主效应 A）。</li>
+<li>H2：AI 评图条件下理由中 AI 词汇的比例更高（主效应 B）。</li>
+<li><b>H3（核心）</b>：在心理所有权和设计辩护两项上，A×B 交互显著，「私有 × AI 评」这一格的下降大于两个主效应之和。</li>
+<li>H4：标准内化程度在 B 对所有权的影响中起中介作用（探索性）。</li>
+</ol>
+
+<h3>分析</h3>
+<ul>
+<li>线性混合模型：<code>DV ~ 可见性 × 评图来源 + 冲刺序位 + 题目 + (1 | 团队/学生)</code>，用 R 的 lme4 包；比例类因变量用 GLMM。</li>
+<li>样本量：先做 2 组试点估计效应量，再用 <code>simr</code> 做模拟功效分析。如果 16 组不够，先砍到「只测 H3 的两个关键格」，而不是缩小样本。</li>
+<li>定性部分对照解释定量结果，重点找<b>反例</b>，比如私有 × AI 评条件下所有权反而很高的人。</li>
+</ul>
+
+<h3>降级梯子（资源不够时）</h3>
+<ol>
+<li>2×2 完整版（上面这套）</li>
+<li>只操纵评图权威（因素 B），可见性固定为私有，加访谈</li>
+<li>Study 1 日志 + 访谈 + 标准内化任务（无操纵）→ 投 CSCW 或 DIS 的定性/混合论文</li>
+<li>4 页立场论文或 LBW，先占住概念</li>
+</ol>
+
+<h2>五、文章结构（CHI Full，正文约 9,000–11,000 词）</h2>
+<p class="sub">CHI 现在没有页数上限，要求篇幅与贡献相称，最新规定以官网为准。下面的词数是参考预算。</p>
+<table>
+<tr><th>节</th><th>词数</th><th>写什么</th><th>常见坑</th></tr>
+<tr><td>Abstract</td><td>150–200</td><td>现象 → 命题（dual attribution）→ 研究设计 → 关键发现 → 一句「披露标签只是治标」</td><td>写成系统介绍</td></tr>
+<tr><td>1 Introduction</td><td>1,000</td><td>用一个具体场景开头：评图课上老师问「这部分谁做的、为什么好」，没人答得上来。接着指出工作坊靠两根支柱撑着，AI 同时占了两个位置。列 RQ 和 3 点贡献</td><td>从「AI 很火」开头</td></tr>
+<tr><td>2 Related Work</td><td>1,500</td><td>2.1 作者归属与 AI；2.2 评图与批评权威；2.3 团队、可识别性与社会懈怠；2.4 GenAI 进入设计教育（Park 等）。最后一段写交汇点的空位</td><td>写成文献清单，没有立场</td></tr>
+<tr><td>3 Formative Study</td><td>1,000</td><td>Study 1 的发现，用来引出 Study 2 的设计依据</td><td>和 Study 2 脱节</td></tr>
+<tr><td>4 Apparatus: Morrow</td><td>700</td><td><b>写得越朴素越好</b>：只讲两个开关如何实现、为什么这样实现、放弃了哪些方案。配图 1 张</td><td>贴满截图来炫系统</td></tr>
+<tr><td>5 Study 2 Method</td><td>1,500</td><td>参与者、拉丁方、操纵、测量、编码方案、κ 值、预注册链接、伦理</td><td>没写操纵检验</td></tr>
+<tr><td>6 Results</td><td>2,000</td><td>按 H1–H4 依次报告：效应量 + 置信区间 + 交互图，然后穿插定性引语</td><td>只报 p 值</td></tr>
+<tr><td>7 Discussion</td><td>1,800</td><td>7.1 为什么会超加：作者感依赖对标准的掌握；7.2 为什么披露或署名只是治标；7.3 设计原则：授权机制（authorizing mechanisms），即让 AI 评语必须由某个人「认领」才生效；7.4 对教育评价的影响</td><td>把 Results 再复述一遍</td></tr>
+<tr><td>8 Limitations &amp; Future</td><td>500</td><td>单一学校、短冲刺、AI 评图员只有一种配置；反过来写成下一篇的问题：AI 的「在场」和「不透明」各自起多大作用</td><td>写得太卑微</td></tr>
+<tr><td>9 Conclusion</td><td>200</td><td>回到开头那个评图场景</td><td></td></tr>
+</table>
+<h3>图表清单</h3>
+<ol>
+<li>Fig.1 Teaser：两根支柱示意图，AI 同时坐进两个位置</li>
+<li>Fig.2 Morrow 的两个开关（可见/私有 × 老师/AI 评），用 <a href="gallery.html">gallery</a> 里的深色图改</li>
+<li>Fig.3 研究流程：拉丁方 × 4 个冲刺的时间线</li>
+<li>Fig.4 核心交互图：2×2 均值和置信区间（这张图就是整篇论文）</li>
+<li>Fig.5 标准内化：四个条件下理由词汇来源的堆叠条形图</li>
+<li>Table 1 测量汇总；Table 2 混合模型结果；Table 3 定性主题</li>
+</ol>
+
+<h3>英文摘要草稿（数字先留空）</h3>
+<div class="box en">Design studios rest on two forms of authority: authorial authority — an identifiable author of the work — and critical authority — an accountable owner of the standard by which it is judged. Generative AI now occupies both seats. We propose <i>dual attribution</i> to describe how these two forms of authority become jointly illegible, and present a mixed-methods study in which <u>16</u> four-person student teams completed four design sprints in Morrow, a team workspace that let us vary (a) whether agent invocations were visible to teammates and (b) whether mid-sprint critique came from an instructor or an AI critic. Private invocation increased misattribution of contribution by <u>X</u>; AI critique shifted students' justification vocabulary toward the critic's by <u>Y</u>. Crucially, the two combined superadditively: under private invocation with AI critique, psychological ownership and the ability to defend one's design dropped by <u>Z</u> beyond the sum of the two effects. We argue that disclosure labels address the wrong problem: the issue is the redistribution of authority, not of information. We characterize design principles for <i>authorizing mechanisms</i> that make someone answerable for a standard.</div>
+
+<h2>六、时间表（倒推到 CHI 2028，2027 年 9 月截稿）</h2>
+<table>
+<tr><th>时间</th><th>任务</th><th>关卡（不过就不往下走）</th></tr>
+<tr><td>2026.12</td><td>导出旧日志；在 Morrow 里实现两个开关和埋点；提交伦理审查；开始 Study 1 访谈</td><td>日志能否导出，并且能区分<b>谁调用了 agent</b></td></tr>
+<tr><td>2027.01</td><td>Study 1 分析；做词表和标准内化材料；2 组试点</td><td>试点中操纵检验通过</td></tr>
+<tr><td>2027.01–02</td><td>（可选）投 C&amp;C 或 CHI LBW；在 OSF 预注册</td><td>预注册链接到手</td></tr>
+<tr><td>2027.03–06</td><td>春季学期跑 Study 2：4 个冲刺 + 测量 + 访谈</td><td>每周检查数据完整率 ≥ 90%</td></tr>
+<tr><td>2027.07</td><td>编码（κ）+ 混合模型 + 主题分析</td><td>H3 结果出来；若为 null，按第二节的预案改写</td></tr>
+<tr><td>2027.08</td><td>写初稿（先写 Abstract 和 Fig.4），请导师和 1 位 HCI 外审读</td><td>外审能用一句话复述贡献</td></tr>
+<tr><td>2027.09</td><td>投 CHI 2028；同时开始写 IJTDE 的教学实践版</td><td></td></tr>
+</table>
+
+<h2>七、这周就该做的 5 件事</h2>
+<ol>
+<li><b>确认旧项目日志还在、能导出，并且能区分「谁调用 agent」和「谁改了什么」</b>。这是唯一事后补不了的东西。</li>
+<li>在 Morrow 里加埋点字段：<code>invoker_id</code>、<code>ai_granularity</code>、<code>parent_version_id</code>、<code>action</code>、<code>visibility_setting</code>、<code>critique_source</code>。</li>
+<li>跟导师确认：2027 年春季有没有一门能嵌入 4 个冲刺的课，人数够不够 16 组。</li>
+<li>精读第一节表里的 #1 Park 和 #5 Han 2024，各写半页「它做了什么、我比它多什么」。</li>
+<li>去官网核实 CHI 2028 / C&amp;C 2027 / CSCW 的截稿日期，再把伦理审查流程问清楚。</li>
+</ol>
+</div></body></html>
