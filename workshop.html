@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>把「新工作坊」说成学术命题</title>
+<style>
+:root{--bg:#0c0e11;--fg:#e9e7e2;--dim:#87857f;--line:#23262b;--acc:#7fa8c9;--acc2:#c8a35a;--card:#131619}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.78 -apple-system,"PingFang SC","Noto Sans SC",system-ui,sans-serif}
+.wrap{max-width:880px;margin:0 auto;padding:64px 24px 120px}
+h1{font-size:33px;line-height:1.32;margin:0 0 10px;font-weight:600;letter-spacing:-.01em}
+h1 em{color:var(--acc);font-style:normal}
+.sub{color:var(--dim);font-size:14px;margin-bottom:52px;border-bottom:1px solid var(--line);padding-bottom:22px}
+h2{font-size:21px;margin:62px 0 16px;font-weight:600;padding-top:6px}
+h2 .n{color:var(--acc);font-size:13px;font-family:ui-monospace,monospace;margin-right:10px;vertical-align:2px}
+h3{font-size:16.5px;margin:26px 0 8px;font-weight:600;color:#f0eee9}
+p{margin:0 0 14px;color:#d3d1cb}
+.lead{font-size:17px;color:var(--fg)}
+ul,ol{padding-left:22px;margin:0 0 16px}li{margin-bottom:9px;color:#d3d1cb}
+li b{color:var(--fg)}
+blockquote{border-left:2px solid var(--acc);padding:4px 0 4px 20px;margin:20px 0;color:#c2c0ba;font-size:15.5px}
+blockquote.strong{border-left-color:var(--acc2);color:#e9e7e2;font-size:17px;line-height:1.7}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14.5px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--dim);font-weight:500;font-size:13px}
+code{font-family:ui-monospace,monospace;font-size:13px;background:#1a1e23;padding:1px 5px;border-radius:4px;color:#c3b393}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin:16px 0}
+.card .claim{font-size:16.5px;font-weight:600;line-height:1.55;margin-bottom:8px}
+.card .claim i{color:var(--acc);font-style:normal;font-family:ui-monospace,monospace;font-size:13px;margin-right:8px}
+dl.kv{margin:0;display:grid;grid-template-columns:70px 1fr;gap:7px 14px;font-size:14.5px}
+dl.kv dt{color:var(--dim);font-size:13px}
+dl.kv dd{margin:0;color:#cfcdc7}
+.tag{display:inline-block;font-size:11.5px;border:1px solid #2d3a44;border-radius:999px;padding:1px 9px;color:var(--acc);margin-left:8px;vertical-align:2px;font-weight:400}
+.warn{border:1px solid #3a2f22;background:#191512;border-radius:9px;padding:16px 20px;margin:18px 0}
+.warn b{color:var(--acc2)}
+.foot{margin-top:76px;padding-top:20px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+.en{font-family:ui-monospace,"SF Mono",monospace;font-size:13.5px;line-height:1.7;background:#12151a;border:1px solid var(--line);border-radius:8px;padding:16px 18px;color:#c9d4dd;margin:14px 0}
+</style>
+</head>
+<body><div class="wrap">
+
+<h1>「我发明了一种新的 workshop」<br><em>怎么变成一句学术命题</em></h1>
+<div class="sub">Morrow 学生工作区 · 第二部分 · 2026-11</div>
+
+<h2><span class="n">00</span>你这句话为什么"虚"——不是因为不对，是因为它没说清<b>新在哪里</b></h2>
+<p class="lead">「我发明了一种新的教学交互模式」这句话在答辩上能唬住人，在审稿人面前一秒破功。因为三个问题都答不上来：</p>
+<ul>
+<li><b>新相对于什么？</b> 相对于 Schön 讲的 reflective practicum？相对于设计冲刺？相对于「Miro 白板 + 群里发 ChatGPT」？不说清楚参照物，「新」是形容词不是事实。</li>
+<li><b>新模式里<b>哪一个变量</b>变了？</b> 「AI 和工作坊结合」是功能描述，不是机制。没有变量，就没有因果，也没有实验。</li>
+<li><b>它什么时候会失效？</b> 没有任何模式是普适的。说不出边界条件，说明你还没把它想成机制，只是把它想成了产品。</li>
+</ul>
+<p>这并不是说你的直觉错了。你的直觉很准，只是还没被翻译。下面四步是翻译器。</p>
+
+<h2><span class="n">01</span>学术化四步：命名 → 参数化 → 机制 → 边界</h2>
+<table>
+<tr><th>步</th><th>要产出什么</th><th>你现在的状态</th></tr>
+<tr><td>① 命名</td><td>给这个形式一个能被人引用的名字，并一句话定义它的<b>公共对象</b>是什么</td><td>缺。你叫它"新的 workshop"，别人无法引用</td></tr>
+<tr><td>② 参数化</td><td>把它拆成 3–5 个可配置的维度（design space），别人能据此造出别的版本</td><td>有一半。你的界面里已经有这些参数，但没被写成参数</td></tr>
+<tr><td>③ 机制</td><td>一个可被反驳的因果预测：改动某参数 → 某人的行为/认知改变，<b>并且为什么</b></td><td>缺。这是"虚"的主要来源</td></tr>
+<tr><td>④ 边界</td><td>说明它在什么条件下不成立（团队规模、技能阶段、任务类型）</td><td>缺。但你已经能感觉到（比如高年级可能不需要）</td></tr>
+</table>
+<p>四步做完，你就不再是"我做了个平台"，而是"我提出并刻画了一种形式，并检验了它的一个机制"。前者是作品集，后者是论文。</p>
+
+<h2><span class="n">02</span>关键一步：把"工作坊"重新定义为<b>公共对象</b></h2>
+<p class="lead">工作坊（studio / crit）之所以是工作坊，从来不取决于桌椅怎么摆、几个人一组，而取决于<b>什么东西被摆到公共面前供人追问</b>。传统工作坊的公共对象是<b>半成品作品</b>，权威解释者是<b>教师</b>，稀缺资源是<b>教师的时间</b>。</p>
+<p>AI 进来以后，真正被改掉的是这三件事：</p>
+<ul>
+<li><b>过程第一次变得可读。</b> 谁在第几版改了什么、agent 补了哪一段、团队在哪一步分叉——这些以前只活在硬盘里，现在是一部可以被翻看的日志。<b>可读的过程，本身就可以成为工作坊的公共对象。</b></li>
+<li><b>批评的稀缺性被解除。</b> 教师的时间不再稀缺，随时能拿到反馈。于是工作坊的组织问题从"排期"变成"<b>可见性设计</b>"：谁看得见谁的中间态、谁的 agent 说了什么。</li>
+<li><b>房间里多了一个没有立场、也没有责任的参与者。</b> 它参与创作，但不能被追责；它产出很快，但对结果没有利害关系。这在教学法上是一个新问题：<b>当相当一部分工作由一个既不是教师也不是学生的第三方完成时，工作坊怎么组织？</b></li>
+</ul>
+<blockquote class="strong">你要说的话不是「我把 AI 加进了工作坊」，而是：<br><br>「我把工作坊的公共对象，从<b>作品</b>换成了<b>过程</b>。AI 不是这个工作坊里多出来的一个工具，它是让这个过程第一次可以被看见、被追问、被追责的那个条件。」</blockquote>
+<p>这句话在答辩上可以用，在论文第一段也可以用。它包含了一个 claim（公共对象转移）、一个条件（可读性由 AI/日志提供）、一个后果（可追责性成为设计问题）。</p>
+
+<h3>可以用的名字</h3>
+<p>推荐：<b>legible studio（可见的工作坊）</b>。备选：<i>process-first crit</i>、<i>instrumented studio</i>。名字只要满足两个条件——能被一句话定义、能和你做的界面挂上钩。定义句式：</p>
+<div class="en">A workshop format in which the team's <b>production process</b> — not the finished artifact — is the shared object of critique, and in which an AI collaborator's <b>invocation rights, output visibility, and intervention timing</b> are explicit, configurable parameters.</div>
+
+<h2><span class="n">03</span>参数化：五个维度（你的界面里其实已经都有了）</h2>
+<p class="lead">这是你最省力也最有分量的一步。你现在已经实现了这些差异，只是没把它们写成"设计空间"。</p>
+<table>
+<tr><th>轴</th><th>取值</th><th>你平台上对应的地方</th></tr>
+<tr><td><b>A 调用权</b> 谁能请 agent 干活</td><td>个人私有 / 组内共享 / 教师调用 / 全班共用一个</td><td>AI 讨论与执行、团队活动与权限</td></tr>
+<tr><td><b>B 可见性</b> 谁看得见 agent 的产出与过程</td><td>只给调用者 / 组内 / 全班 / 教师独占</td><td>笔记编辑与留言、成熟项目与多选</td></tr>
+<tr><td><b>C 时机</b> agent 什么时候说话</td><td>提交后（事后）/ 被调用才答 / 过程中主动介入</td><td>AI 讨论与执行 vs 课堂与工作坊</td></tr>
+<tr><td><b>D 角色</b> 你让它扮谁</td><td>执行者 / 批评者（critic）/ 提问者（Socratic）/ 记录者 / 仲裁者</td><td>AI 讨论与执行里的多种模式</td></tr>
+<tr><td><b>E 归属</b> 贡献留不留痕</td><td>无痕 / 有署名 / 有贡献度统计</td><td>灵动版本叠层 + 埋点</td></tr>
+</table>
+<p>一张 5 轴的表，就是一次设计空间贡献。<b>你不需要证明你的那个点是唯一正确的，你只需要证明这些点之间存在真实差异，而且差异是可预测的。</b>这比"我发明了它"稳得多——它同时把你申请专利式的口吻，换成了研究者的口吻。</p>
+
+<h2><span class="n">04</span>三条机制命题（带可被证伪的预测）</h2>
+
+<div class="card">
+<div class="claim"><i>M1</i>把 critic 放在组内共享，会提高低话语权成员的参与，但降低他们对教师 crit 的准备度</div>
+<dl class="kv">
+<dt>为什么</dt><dd>批评指向作品而非人，且随时可用 → 内向的人敢问、不用当众暴露；但也因此把"最后的审判"提前消耗掉了，到真 crit 时已经没有被挑战的紧张感。</dd>
+<dt>怎么测</dt><dd>6 周团队部署，组内共享 critic vs 个人私有 critic（拉丁方）。测：每人发言轮次（日志 + 录音编码）、教师 crit 前 24h 的修改量、学生对 crit 的焦虑与准备度自评。</dd>
+<dt>投哪里</dt><dd>CHI / CSCW（CSCW 走 PACM rolling）。</dd>
+<dt>风险</dt><dd>会被问"这不就是 AI 助教"。答法：区别在<b>角色</b>——助教给答案，critic 只追问；且你的操纵是<b>共享范围</b>，不是有无 AI。</dd>
+</dl>
+</div>
+
+<div class="card">
+<div class="claim"><i>M2</i>agent 调用的私有化，会让团队贡献变得不可归因——而且 AI 越强，偏差越大<span class="tag">首推</span></div>
+<dl class="kv">
+<dt>为什么新</dt><dd>团队协作 + AI 的研究几乎都停在"团队绩效有没有提高"。没人问：<b>AI 是否让"谁做了什么"这件事实质性消失</b>。这是团队特有的问题，不是单人的问题乘以人数。</dd>
+<dt>为什么重要</dt><dd>设计教育的评分单位是团队作品 + 个人成长。如果过程不可归因，评价就退化成"看谁最后提交得多"，而这件事在 agent 时代可以被一个人伪造。<b>这是教学公平问题，不是效率问题。</b></dd>
+<dt>怎么测</dt><dd>受试内（同一批团队，两种调用可见性），N=12–16 个 4 人团队。测：团队自评贡献分配 vs 教师盲判 vs 日志真实比例，三者的一致性（用 ICC / 偏差绝对值）；再加一次"事后复盘"，看团队能否凭记忆还原谁做了什么。</dd>
+<dt>证据链</dt><dd>一致性下降 + 偏差随 AI 使用强度上升（相关）+ 复盘失败的具体模式（质性，3–4 条轨迹）。</dd>
+<dt>投哪里</dt><dd>CSCW 最合，DIS 次之。</dd>
+<dt>风险</dt><dd>"这是 social loafing 老问题"。答法：老结论是<b>个体懈怠</b>，你的是<b>归因失真</b>——人可能没偷懒，但记录不允许被看见。方向相反，机制不同。</dd>
+</dl>
+</div>
+
+<div class="card">
+<div class="claim"><i>M3</i>过程内主动介入会提高迭代次数但降低收敛——工作坊组织者真正痛的地方</div>
+<dl class="kv">
+<dt>为什么</dt><dd>随时有人给你新可能，团队就永远在发散；而工作坊必须有"定稿"这个仪式。</dd>
+<dt>怎么测</dt><dd>同一任务，主动介入 vs 被动调用。测：版本数、版本间的意图一致性（编码）、是否按期定稿、成员对"被催"的感受。</dd>
+<dt>投哪里</dt><dd>DIS full paper 或 Pictorials（这个话题很适合图文并说）。</dd>
+<dt>风险</dt><dd>结论可能太常识。要靠机制解释撑起来：不是"AI 让人发散"，而是"<b>主动介入把决定权从团队手里悄悄拿走了</b>"。</dd>
+</dl>
+</div>
+
+<p><b>先做 M2。</b> 理由：它是团队层面独有的问题（别人做不了，因为要有真实团队 + 真实日志）、成本最低（不需要重做系统，只需要两种可见性 + 一份问卷）、而且即使结果是"没有偏差"，也照样能发——那等于说 AI 没有破坏教学公平，是个有价值的公共结论。</p>
+
+<h2><span class="n">05</span>文献锚点：五条线，每条三篇（读这三篇就够撑起 related work 的骨架）</h2>
+<ul>
+<li><b>工作室/反思性实践</b> —— Schön（1983 / 1987）的 reflective practicum 是整个 studio 教学法的理论源头，你的"crit 是仪式"这句话必须挂在他身上。再补一篇近年 design critique 的实证研究（在 DIS/CHI 上找 "critique" 关键词，2022 年后，让它替你说明批判机制至今没被参数化）。</li>
+<li><b>共同可见性 awareness</b> —— Dourish &amp; Bellotti（1992, CSCW）关于共享工作空间里"知道别人在做什么"的经典分析。你的整个 B 轴都是它的当代版本，引用它就是把自己的贡献缝进 CSCW 主干。</li>
+<li><b>课堂编排 orchestration</b> —— Dillenbourg（2013）与 Sharples（2013）关于教师如何在真实课堂里调度注意力的论述。你的"教师时间不再是稀缺资源"这句判断，是对他们的直接回应。</li>
+<li><b>边界物与分布式认知</b> —— Star &amp; Griesemer（1989）、Hutchins（1995）。用来论证"过程日志成为新的边界物"这一句。别滥用，一段话够。</li>
+<li><b>团队贡献与懈怠</b> —— Latané, Williams &amp; Harkins（1979）social loafing 是你要正面对话的老对手；再补一篇 CSCW 上关于"个人贡献可见性"的工作。M2 的说服力全靠这条线。</li>
+</ul>
+<p style="color:var(--dim);font-size:14px">这些是我能负责的锚点；具体篇名请去 Google Scholar 核对一遍再写进参考文献。近两年"AI in design education / AI critique"的短文很多，务必自己扫一遍最新的，免得被审稿人指出漏引。</p>
+
+<h2><span class="n">06</span>把"形式"当贡献，需要过哪几道关</h2>
+<p>如果 P（这页的 workshop）当主角、实验当配角，那它是一篇 <b>Artifact / Methodological</b> 贡献。这类论文的过关条件跟实证论文不一样：</p>
+<ol>
+<li><b>可复现的形式</b>：把 legible studio 写成一份别人能照着搭的规格（五轴的取值 + 每个轴上你的选择及理由 + 替代方案）。不是截图，是规格。</li>
+<li><b>非显然性</b>：必须有一段"为什么不能更简单"——比如为什么不能就用微信群 + ChatGPT。审稿人最爱问这个，答不上来说明形式本身不成立。</li>
+<li><b>一个证明它真的不同的证据</b>：哪怕只有 M2 一项，也足够。形式论文不需要全证据，需要一条硬的。</li>
+<li><b>可迁移</b>：说明它能不能用于建筑、工业设计、或非设计专业。能迁移，才叫形式；只能在你课上用，那叫课程。</li>
+</ol>
+<div class="warn"><b>别做的事：</b>不要说「invent」。英文里 <code>we propose / we present / we characterize</code> 站得住，<code>we invent</code> 一站不住；而且"发明"会把评审的注意力引到优先权之争上，那是你必输的战场——你要的是解释力，不是首发权。</div>
+
+<h2><span class="n">07</span>可以直接抄的措辞</h2>
+<h3>中文摘要第一句（毕设/答辩用）</h3>
+<blockquote>本文提出「可见的工作坊」（legible studio）：一种以团队<b>协作过程</b>而非最终作品作为公共批评对象的设计教学工作坊形式，并把 AI 协作者的<b>调用权限、输出可见性与介入时机</b>确立为三个可配置参数。通过为期 X 周、N 个团队的部署研究，本文发现……</blockquote>
+<h3>英文摘要</h3>
+<div class="en">We present the <b>legible studio</b>, a workshop format in which the team's production process — rather than the finished artifact — becomes the shared object of critique, and in which an AI collaborator's invocation rights, output visibility, and intervention timing are treated as explicit, configurable design parameters. In a six-week deployment with N student teams, we find that…</div>
+<h3>答辩时的一句话</h3>
+<blockquote>「我不是把 AI 加进了工作坊，我是把工作坊的公共对象从作品换成了过程。AI 不是多出来的一个工具，它是让这个过程第一次可以被看见、被追问的条件。」</blockquote>
+
+<h2><span class="n">08</span>审稿人会怎么打你（提前想好答案）</h2>
+<table>
+<tr><th>攻击</th><th>你的回应</th></tr>
+<tr><td>"这不就是 Miro + ChatGPT / 一堆 SaaS 拼起来的？"</td><td>区别在<b>公共对象与可见性被当成参数</b>，而不是功能相加。给五轴表，指出商业工具在其上都是固定点。</td></tr>
+<tr><td>"AI 助教早有人做了。"</td><td>角色不同（critic/提问者 vs 答题者），且你操纵的是<b>共享范围</b>与<b>时机</b>，不是有无。</td></tr>
+<tr><td>"一个班，N 太小，不能外推。"</td><td>明写 instrumented case study / design deployment，贡献是机制与设计空间，效应量作为方向性证据。附上日志规模。</td></tr>
+<tr><td>"过程可见会不会让学生不敢试错？"</td><td>这恰恰是 M1/M2 要测的东西，把它写进研究问题，而不是藏起来。你已经有一个可调参数（B 轴）专门处理它。</td></tr>
+<tr><td>"教育研究该投 CSCL 不是 CHI。"</td><td>你的对象是<b>交互形式</b>而非学习结果，CHI/DIS/CSCW 正当；同时挂一篇 CSCL 做备选。</td></tr>
+</table>
+
+<div class="foot">
+一句话：把「我发明了一种工作坊」换成「我提出了一种把过程当作公共对象的工作坊，并把它拆成五个可调参数，其中<b>可见性—归因</b>这一条我做了实证」。前一句是自述，后一句是贡献。两者做的是同一件事，只有后者能被人引用。
+</div>
+
+</div></body></html>
