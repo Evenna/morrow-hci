@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>有野心的那一篇</title>
+<style>
+:root{--bg:#08090b;--fg:#eceae5;--dim:#82807b;--line:#1f2227;--acc:#d8a94f;--acc2:#9db98f;--card:#101317;--blue:#86aecd}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.8 -apple-system,"PingFang SC","Noto Sans SC",system-ui,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:70px 24px 130px}
+h1{font-size:34px;line-height:1.34;margin:0 0 12px;font-weight:600;letter-spacing:-.015em}
+h1 em{color:var(--acc);font-style:normal}
+.sub{color:var(--dim);font-size:13.5px;margin-bottom:48px;border-bottom:1px solid var(--line);padding-bottom:20px}
+.sub a{color:var(--dim);text-decoration:none;border-bottom:1px solid #2a2d33}
+h2{font-size:21px;margin:58px 0 16px;font-weight:600;padding-top:6px}
+h2 .n{color:var(--acc);font-size:13px;font-family:ui-monospace,monospace;margin-right:11px;vertical-align:2px}
+h3{font-size:16.5px;margin:24px 0 8px;font-weight:600;color:#f2f0eb}
+p{margin:0 0 14px;color:#d3d1cb}
+.lead{font-size:17px;color:var(--fg)}
+ul,ol{padding-left:22px;margin:0 0 16px}li{margin-bottom:9px;color:#d3d1cb}
+li b{color:var(--fg)}
+blockquote{border-left:2px solid var(--acc);padding:4px 0 4px 20px;margin:22px 0;color:#c9c6c0;font-size:16px}
+blockquote.big{border-left:3px solid var(--acc);color:#f2f0eb;font-size:19px;line-height:1.75;padding:8px 0 8px 22px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14.5px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--dim);font-weight:500;font-size:12.5px}
+code{font-family:ui-monospace,monospace;font-size:13px;background:#181c21;padding:1px 5px;border-radius:4px;color:#c1b28e}
+.abs{background:#0d1014;border:1px solid #24282e;border-radius:10px;padding:22px 24px;margin:18px 0;font-size:15px;line-height:1.85;color:#dcdad4}
+.abs .lab{display:block;font-size:11.5px;letter-spacing:.14em;color:var(--acc);margin-bottom:12px;text-transform:uppercase}
+.abs b{color:#f2f0eb}
+.en{font-family:ui-monospace,"SF Mono",monospace;font-size:13.5px;line-height:1.8;color:#c6d2da}
+.not{border:1px solid #3a2622;background:#1a1311;border-radius:9px;padding:15px 19px;margin:16px 0;font-size:15px}
+.not b{color:#c97a6a}
+.warn{border:1px solid #3a2f22;background:#191512;border-radius:9px;padding:15px 19px;margin:16px 0;font-size:15px}
+.warn b{color:var(--acc)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.two{grid-template-columns:1fr}}
+.box{border:1px solid var(--line);border-radius:9px;padding:16px 18px;background:#0d1014}
+.box h4{margin:0 0 9px;font-size:14.5px;color:var(--acc)}
+.box p{font-size:14px;margin:0 0 8px;color:#c9c7c1}
+.box p:last-child{margin:0}
+.titles li{margin-bottom:12px;list-style:none;border-left:1px solid #2a2d33;padding-left:16px}
+.titles li b{color:#f2f0eb;font-size:16px}
+.titles li span{display:block;color:var(--dim);font-size:13px;margin-top:2px}
+.titles{padding-left:0}
+.foot{margin-top:70px;padding-top:20px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+</style>
+</head>
+<body><div class="wrap">
+
+<h1>你想要有野心<br><em>那就写这一篇</em></h1>
+<div class="sub">Morrow 学生工作区 · 第五部分 · 2026-11 · <a href="directions.html">← 方向全景</a> · <a href="workshop.html">workshop 篇</a></div>
+
+<h2><span class="n">00</span>先校正"野心"这个词</h2>
+<p class="lead">野心不是做得更多、系统更大、数据更多。那叫工程量大。学术上有野心只有三个判据：</p>
+<ol>
+<li><b>你要动摇一个大家都默认的前提。</b>没人研究 A，可能是因为 A 不重要；也可能是因为大家都没意识到自己假设了它。（后者才值钱）</li>
+<li><b>你的发现如果成立，会改变别人的做法，而不只是改变你的界面。</b></li>
+<li><b>它有一个能被一句话说出来的名字</b>，而且那个名字以前不存在。</li>
+</ol>
+<p>按这三条，你手上最有力的东西不是"AI 改善了工作坊"，而是一个更大的判断：<b>工作坊赖以成立的那个前提，在 AI 进来之后塌了。</b></p>
+
+<h2><span class="n">01</span>那个前提是什么</h2>
+<p class="lead">工作坊（studio / crit）不是一个房间，是一种<b>权威结构</b>。它靠两个人撑着：</p>
+<div class="two">
+<div class="box">
+<h4>创作权威 · authorial authority</h4>
+<p>「这是我的作品。」<br>一个可被指认的人在作品上署名，因此<b>作品进了他的简历、决定了他的身份、也让他为它负责</b>。</p>
+</div>
+<div class="box">
+<h4>批评权威 · critical authority</h4>
+<p>「这还不够好，因为……」<br>一个可被指认的人在评图桌上说话，因此<b>标准是有主人的、可被追问的、也可以被反驳</b>。</p>
+</div>
+</div>
+<p>设计教育的整套机制都建立在这两样成立之上：评图之所以是仪式，因为判断稀有且来自一个人；作品集之所以能当证据，因为署名是真的；学生之所以在几年里长出自己的眼，因为他一直在<b>内化一个具体的人的判断</b>。</p>
+<p>现在看 AI 做了什么——<b>它同时坐在两个位置上。</b></p>
+<blockquote class="big">它既产出了作品的一部分（使"这是我做的"变得可疑），又给出了判断（使"标准是谁定的"变得可疑）。<br><br>于是工作坊的两项权威<b>同时被抽空</b>，但<b>没有任何一方接手</b>。</blockquote>
+
+<h2><span class="n">02</span>核心命题：两种丧失不是相加，是相乘</h2>
+<p class="lead">这是整篇论文的心脏，也是它为什么有野心的地方。普通研究只会说"AI 让归属感下降"或"AI 让标准模糊"。你的判断要更进一步：</p>
+<blockquote class="big">当团队成员既看不清"谁做了什么"，又说不清"标准是谁定的"时，两者会<b>互相放大</b>——合起来造成的崩塌，显著大于各自单独造成的崩塌之和。</blockquote>
+<p><b>为什么这个预测在理论上成立</b>：作者感不是"我做了多少"的函数，而是"我做的部分对结果负责"的函数。而"对结果负责"需要你至少知道结果该长什么样——也就是说，<b>创作归属依赖判断标准的归属</b>。标准一旦外包给 AI，即使你亲手画了每一笔，你也不再能说"我做了一个判断"。反过来，如果你握着自己的标准，但过程被 agent 填满，你同样判不了这一笔该不该归你。</p>
+<p>这是一个<b>交互效应的理论论证</b>，不是一句体察。它让你从"我做了个平台"跃到"我提出了一个关于创意劳动的认识论判断"，而且它可以被数据推翻——这正是它值钱的原因。</p>
+
+<h2><span class="n">03</span>给它一个名字（唯一你要造的词）</h2>
+<p>造一个概念，只造一个。我的建议：</p>
+<p style="font-size:19px;color:#f2f0eb;margin:14px 0">双重归属 · <span style="font-family:ui-monospace,monospace;font-size:16px;color:var(--acc)">dual attribution</span><br><span style="font-size:15px;color:var(--dim)">= 作者归属（谁的） × 标准归属（谁说的）</span></p>
+<p>然后是你论文的真正论点，用一句能放进 abstract 的话：</p>
+<blockquote>工作坊的正常运转依赖双重归属同时成立。AI 同时占据生产与判断的位置，因而<b>不是削弱了其中一项，而是让两者一起失效</b>。我们发现这两种丧失在经验上互相放大——这意味着可以靠"加一个署名记录"或"加一个教学说明"来修复的做法，从根本上解决不了问题。</blockquote>
+<p>最后那句是关键：<b>它宣判了一整类现有方案（署名标签、AI 使用声明、诚信教育）是治标的。</b>能动摇别人做法的论文，才会被引用。</p>
+
+<h3>标题候选</h3>
+<ul class="titles">
+<li><b>Two Authors in the Room</b><span>房间里的两个作者 · 英文投稿首选，好记，可直接做封面</span></li>
+<li><b>Who Holds the Standard?</b><span>谁握着标准 · 偏质问式，适合 CSCW / CHI</span></li>
+<li><b>The Unaccountable Studio</b><span>无处追责的工作坊 · 最锋利，但也最需要数据撑住</span></li>
+<li><b>两重归属：AI 时代设计工作室的权威流失</b><span>中文版 / 毕设标题</span></li>
+</ul>
+
+<h2><span class="n">04</span>先把它写成摘要（这是最高效的一步）</h2>
+<p>有野心的论文都是从摘要开始写的，不是从引言。下面这版你直接拿去改，改的过程就是你想清楚的过程。带下划线的地方是你要用数据替换的。</p>
+
+<div class="abs">
+<span class="lab">Abstract · 中文草稿</span>
+设计工作坊的运转建立在两种权威之上：作品有一个可被指认的作者，判断有一个可被追问的主人。生成式 AI 同时进入了这两个位置——它参与生产，也参与评价。既有研究分别考察了 AI 协作中的作者感与 AI 反馈中的标准质量，但<b>没有人问过：当两者同时发生时，会发生什么。</b><br><br>
+本文提出<b>双重归属（dual attribution）</b>框架，把工作坊的稳定运行刻画为作者归属与标准归属的同时成立，并给出一个反直觉的预测：这两种归属的丧失不是相加，而是互相放大。我们在一门设计课程中进行了为期 <u>X</u> 周的部署研究（<u>N</u> 个团队、<u>M</u> 名学生），以 2×2 交叉操纵 agent 调用的可见性与评图权威的来源，测量署名一致性、标准内化程度与作品质量。<br><br>
+结果支持交互假设：在两项归属同时受损的条件下，学生的作者感与判断独立性下降幅度显著大于两种单独受损之和（<u>β</u>）；而单独提高署名透明度、或单独保留教师评图，都只能修复各自那一半。<br><br>
+本文的贡献是：（1）一个把工作坊视为权威结构而非空间组织的分析框架；（2）一项证明双重丧失具有超加性的部署研究；（3）三条面向"授权装置"而非"披露标签"的设计原则。<b>我们的结论是：AI 时代的教学修复不在于把 AI 说清楚，而在于重新分配权威。</b>
+</div>
+
+<div class="abs">
+<span class="lab">Abstract · English draft</span>
+<div class="en">A design studio runs on two authorities: the work has an identifiable author, and the judgment has an accountable owner. Generative AI now occupies both positions at once — it produces, and it evaluates. Prior work has studied authorship in AI co-creation and the quality of AI feedback separately, but no one has asked what happens <b>when both occur together</b>.<br><br>We propose <b>dual attribution</b>, a framework that characterizes a functioning studio as the simultaneous holding of <i>authorial</i> and <i>critical</i> attribution, and derive a counterintuitive prediction: the loss of the two is not additive but multiplicative. In an <u>X</u>-week deployment in a design course (<u>N</u> teams, <u>M</u> students), we crossed the visibility of agent invocation with the source of critique authority in a 2×2 design, measuring signature consistency, internalization of standards, and artifact quality.<br><br>Results support the interaction: when both attributions were undermined, students' sense of authorship and independence of judgment dropped far more than the sum of the two separate losses (<u>β</u>); increasing attribution transparency alone, or retaining teacher critique alone, each repaired only its own half.<br><br>We contribute (1) a framework that treats the studio as an authority structure rather than a spatial arrangement, (2) a deployment study demonstrating the superadditivity of dual loss, and (3) three design principles aimed at <b>authorizing mechanisms</b> rather than <b>disclosure labels</b>.<br><br><b>Repairing design education in the age of AI is not a matter of explaining the AI. It is a matter of redistributing authority.</b></div>
+</div>
+
+<h2><span class="n">05</span>一篇论文装得下：2×2 双归属设计</h2>
+<p class="lead">野心要靠一个干净的设计撑住。<b>2×2 交叉，同一批团队，两个项目，条件对调。</b>这比做两个独立研究省一半力气，也正是"两种丧失互相放大"这个 claim 唯一能被检验的形态。</p>
+<table>
+<tr><th></th><th><b>判断侧</b>：评图权威来自教师</th><th><b>判断侧</b>：评图权威部分来自 AI</th></tr>
+<tr><td><b>生产侧</b><br>agent 调用可见、可署名</td><td>基线<br><span style="color:var(--dim);font-size:13px">传统工作坊 + 一个透明助手</span></td><td>标准受损，作者完整<br><span style="color:var(--dim);font-size:13px">"我自己做的，但不知道好不好"</span></td></tr>
+<tr><td><b>生产侧</b><br>agent 调用私有、不可见</td><td>作者受损，标准完整<br><span style="color:var(--dim);font-size:13px">"我知道什么算好，但说不清这是我做的"</span></td><td><b>双重受损</b><br><span style="color:var(--dim);font-size:13px">预测：崩塌幅度 &gt; 另两格之和</span></td></tr>
+</table>
+<p><b>可行性</b>：<code>N = 12–16 个 4 人团队</code>，一学期两个项目，条件对调（拉丁方平衡顺序）。这就是全部样本量——不需要 100 人，因为你是受试内设计，而且交互效应本来就比主效应更吃设计而不是吃 N。</p>
+
+<h3>三个因变量，各有一个"漂亮的操作化"</h3>
+<ul>
+<li><b>署名一致性</b>：项目结束后，每个成员单独标注"这段/这张是你做的吗"，与系统日志比对，算一致性。<b>不问卷，用日志当真相。</b></li>
+<li><b>标准内化</b>：给每人看两个新作品——一个符合教师一贯标准，一个符合"AI 常见审美"（精致、饱和、无冒险）——让他们盲评并写理由。<b>理由里引用的措辞来自教师、来自 AI、还是自己的判断，可以编码。</b>这是全篇最有说服力的一个测量，因为它测的不是感受，是<b>你的判断用的是谁的词</b>。</li>
+<li><b>作品质量</b>：两位教师盲评 rubric，报告 ICC。</li>
+</ul>
+<p>分析：混合效应模型，主效应 + <b>交互项</b>。你要的结论就落在交互项上。<b>如果交互项不显著</b>——那也很干净：说明两种丧失只是相加，工作坊没那么脆，这个结论同样值得发表，而且它会让你的 Discussion 转向"权威是冗余的"。<b>这就是野心写法的好处：它不赌单一方向。</b></p>
+
+<h2><span class="n">06</span>野心只放在三个地方，其余必须无聊</h2>
+<p class="lead">这是有野心的论文能不能过审的关键，也是新手最容易搞反的地方：<b>不是全篇都很炫，是三处很硬，其余标准得像模板。</b></p>
+<table>
+<tr><th>章节</th><th>这一节的野心</th></tr>
+<tr><td>Title + Abstract</td><td><b>全部野心在这里。</b>审稿人第一分钟就决定要不要认真读。</td></tr>
+<tr><td>Intro</td><td>只有一件事：把"工作坊是房间"改写成"工作坊是权威结构"。一段话，第二段就进 claim，不要政策背景。</td></tr>
+<tr><td>Related work</td><td>两节，各四段：作者归属（共写、心理所有权、署名与披露）、标准归属（crit 研究、AI 反馈、内化）。<b>每节结尾一句"但他们没把它们放在一起看"。</b></td></tr>
+<tr><td>Framework</td><td>半页图：两个权威、两种丧失、一个交互假设。<b>这是全文唯一的图，要能单独被截屏引用。</b></td></tr>
+<tr><td>System</td><td><b>彻底无聊。</b>只写"为了实现操纵，我们加了两个开关和一套日志"，两页，不要炫功能。</td></tr>
+<tr><td>Study</td><td>标准写法：条件、N、任务、测量、编码方案、kappa。<b>一个字的修辞都不要有。</b></td></tr>
+<tr><td>Findings</td><td>先报交互项，再报主效应。单独留一段写"我们没预料到的"。</td></tr>
+<tr><td>Discussion</td><td><b>第二个野心点。</b>三步：为什么是这样 → 所以"署名标签/AI 声明"这类方案为什么治标 → 三条面向授权装置的设计原则。</td></tr>
+<tr><td>Limitations</td><td><b>第三个野心点，反着写。</b>不要说"样本小"。要说"我们的操纵是结构性的，因此不能区分是 AI 的<b>存在</b>还是 AI 的<b>不透明</b>造成效应——这是下一篇的事"。<b>把 limitation 写成下一个问题，是野心的标志。</b></td></tr>
+</table>
+
+<h2><span class="n">07</span>审稿人会怎么打你（这篇一定会被狠打）</h2>
+<p>有野心的论文拒稿率也高。三个必打的点，提前写好答案：</p>
+<table>
+<tr><th>攻击</th><th>你的回应</th></tr>
+<tr><td><b>"你用一个课程的数据宣称一个关于设计教育本质的结论。"</b><br><span style="color:var(--dim)">最致命的一条</span></td><td>承认范围，收紧 claim："我们不是说所有工作坊都会这样，我们证明的是<b>这两项归属之间存在交互</b>——一个机制性的、可复现的关系，而不是一个普适的效应量。" <b>把 claim 从社会学判断降为机制判断，是最稳的救法。</b></td></tr>
+<tr><td>"所谓标准内化，你测的是措辞模仿。"</td><td>正好相反：我们测的正是"判断用的是谁的词"——这是内化最诚实的代理指标，而且它与盲评质量显著相关（<u>给出这条相关</u>）。补一个 6 周后的延迟测更好。</td></tr>
+<tr><td>"这不就是 AI 依赖的老问题。"</td><td>依赖研究问的是"人还会不会自己做"；我们问的是"他做的还能不能算他的、他判的还能不能算他的"。<b>前者是能力问题，后者是归属问题。</b></td></tr>
+</table>
+<div class="warn"><b>一条战术建议</b>：把这篇的"安全版"先发出去。同一次部署，先投一个 CHI Poster 或数据集短文（讲操纵和日志），把设计和方法公开、拿到反馈、也算破零。三个月后投这篇野心版，摘要里可以引自己。<b>这不是拆两篇，是给自己的野心买保险。</b></div>
+
+<h2><span class="n">08</span>如果你只有很短的时间：降级版</h2>
+<p>野心版最短也要 5–6 个月（两次项目周期 + 分析 + 写作）。如果必须更快，按这个顺序砍，<b>砍到哪一步都还能投</b>：</p>
+<ol>
+<li><b>砍成一个学期一个项目</b>：放弃 2×2，只做"生产侧可见性"一个操纵，标准侧用<b>访谈</b>而不是实验操纵。→ 投 IJTDE，仍然是你方向里最好的那篇。</li>
+<li><b>再砍</b>：不做新部署，用<b>已有日志回溯</b> + 8–10 个深度访谈，把论文写成"双重归属"的<b>提出 + 定性证据</b>。→ 投 DIS Pictorials 或 CHI 的 case study track。</li>
+<li><b>到这一步还能砍</b>：把框架单独写成一篇 4 页的 position paper，投 CSCW Companion 或 CHI workshop。<b>概念先落地，数据后补——很多人反着做，结果框架被数据拖着走。</b></li>
+</ol>
+
+<h2><span class="n">09</span>六个月时间表</h2>
+<table>
+<tr><th>月</th><th>做什么</th><th>这一关的判据</th></tr>
+<tr><td>1</td><td>写摘要 + 那张框架图；读 15 篇（作者归属 7、标准归属 5、crit 3）</td><td>能对别人讲 5 分钟不卡；框架图上没有一个多余的框</td></tr>
+<tr><td>1–2</td><td>实现两个开关 + 日志；把"标准内化"的盲评材料做出来（两个新作品 + 编码表）</td><td>两个作品你自己分得清哪个是"AI 审美"</td></tr>
+<tr><td>2</td><td>预实验 2 个团队，跑通全流程</td><td>署名一致性算得出来</td></tr>
+<tr><td>2–4</td><td>第一个项目周期（条件 A/B）</td><td>日志完整率 &gt; 90%</td></tr>
+<tr><td>4–5</td><td>第二个项目周期（条件对调）</td><td>四格都有数据，且每格至少 5 个团队</td></tr>
+<tr><td>5</td><td>分析交互项 + 编码 + 访谈</td><td>交互项方向清楚（显著或不显著都行）</td></tr>
+<tr><td>5–6</td><td>成稿，按第 06 节的骨架逐节写</td><td>Discussion 的三步各占一段，不合并</td></tr>
+</table>
+
+<div class="not"><b>最后一句实话</b>：这篇的野心不在于它多大，而在于它敢说一件让同行不舒服的事——<b>大家都在做"让 AI 更透明""让学生声明用了 AI"，而这篇说那些都是治标的，问题在权威的分配，不在信息的披露。</b>如果你写不出这句让人不舒服的话，这篇就只是装备更好的方案甲。野心是这句话，不是数据量。</div>
+
+<div class="foot">
+一句话：<b>把论文的主角从"我的平台"换成"工作坊赖以成立的两项权威"，然后证明这两项丧失会互相放大——这就是你那篇有野心的论文。</b>剩下的都是执行：2×2、12–16 个团队、三个因变量、一处框架图、一份敢反着写的 limitations。
+</div>
+
+</div></body></html>
